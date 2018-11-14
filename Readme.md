@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [patronovskiy](https://up.htmlacademy.ru/htmlcss/23/user/817783).
-* Наставник: `Неизвестно`.
+* Наставник: [Ярослав Шевцов](https://htmlacademy.ru/profile/id170516).
 
 ---
 
