@@ -5,6 +5,7 @@
 3.основное содержимое страницы
   3.1.блок спец. предложений (слайдер)
   3.2.блок категорий товаров (разделов)
+  3.3.блок услуг (слайдер)
 4.футер страницы
 5.модальные окна
 -->
@@ -75,6 +76,9 @@
     <section class="special-offers-slider">
       <h2 class="visually-hidden">Специальные предложения</h2>
 
+      <!--переключатель слайдов  -->
+      <div class="special-offers-tumbler"></div>
+
       <!--первый слайд-->
       <section class="special-offer-slide slide1">
         <h3 class="visually-hidden">Восьмиметровая селфи-палка</h3>
@@ -102,9 +106,6 @@
       </section>
 
       <!--здесь будет еще 2 таких же слайда -->
-
-      <!--переключатель слайдов  -->
-      <span class="special-offers-tumbler"></span>
 
     </section>
 
@@ -134,6 +135,54 @@
           <a class="product-category category-quadcopters" href="#">Квадрокоптеры</a>
         </li>
       </ul>
+
+    </section>
+
+    <!--3.3.блок услуг (слайдер)  -->
+    <section class="services-slider">
+
+      <h2 class="visually-hidden">Услуги</h2>
+
+      <!--переключатель слайдов-->
+      <div class="services-slider-tumbler">
+        <!--временное решение на радиокнопках-->
+
+        <input type="radio" name="services-slide-radio" id="services-slide-radio1" checked>
+        <input type="radio" name="services-slide-radio" id="services-slide-radio2" checked>
+        <input type="radio" name="services-slide-radio" id="services-slide-radio3" checked>
+
+        <label for="services-slide-radio1">Доставка</label>
+        <label for="services-slide-radio2">Гарантия</label>
+        <label for="services-slide-radio3">Кредит</label>
+
+      </div>
+
+      <!--контейнер слайдов-->
+      <div class="services-slides-container">
+
+        <section class="service-slide service-slide1">
+          <h3>Доставка</h3>
+          <!--делать ли здесь ссылку?-->
+          <p>
+            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+          </p>
+        </section>
+
+        <section class="service-slide service-slide2">
+          <h3>Гарантия</h3>
+          <p>
+            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+          </p>
+        </section>
+
+        <section class="service-slide service-slide1">
+          <h3>Кредит</h3>
+          <p>
+            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+          </p>
+        </section>
+
+      </div>
 
     </section>
 
