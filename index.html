@@ -6,6 +6,8 @@
   3.1.блок спец. предложений (слайдер)
   3.2.блок категорий товаров (разделов)
   3.3.блок услуг (слайдер)
+  3.4.блок партнеров
+  3.5.блок информации "о нас"
 4.футер страницы
 5.модальные окна
 -->
@@ -24,7 +26,6 @@
 <body>
   <!--2.хедер страницы-->
   <header class="main-header">
-
     <a class="main-header-logo">
       <img src="images/index-logo.svg" width="164" height="36" alt="логотип магазина Девайс">
     </a>
@@ -62,9 +63,7 @@
       </ul>
 
       <a class="catalog-navigation-link" href="catalog.html">Каталог товаров</a>
-
     </nav>
-
   </header>
 
   <!--3.основное содержимое страницы-->
@@ -75,10 +74,8 @@
     <!--3.1.блок спец. предложений (слайдер)-->
     <section class="special-offers-slider">
       <h2 class="visually-hidden">Специальные предложения</h2>
-
       <!--переключатель слайдов  -->
       <div class="special-offers-tumbler"></div>
-
       <!--первый слайд-->
       <section class="special-offer-slide slide1">
         <h3 class="visually-hidden">Восьмиметровая селфи-палка</h3>
@@ -90,7 +87,7 @@
           Самая длинная палка для селфи доступна в нашем магазине.
           Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
         </p>
-        <a class="special-offer-link" href="catalog-item.html">Подробнее</a>
+        <a class="special-offer-link button" href="catalog-item.html">Подробнее</a>
         <table class="special-offer-options">
           <tr class="table-header">
             <th>Длина палки</th>
@@ -104,16 +101,12 @@
           </tr>
         </table>
       </section>
-
       <!--здесь будет еще 2 таких же слайда -->
-
     </section>
 
     <!--3.2.блок категорий товаров (разделов) -->
     <section class="product-categories">
-
       <h2 class="visually-hidden">Список категорий товаров</h2>
-
       <ul class="product-categories-list">
         <li>
           <a class="product-category category-vr" href="#">Виртуальная реальность</a>
@@ -135,31 +128,25 @@
           <a class="product-category category-quadcopters" href="#">Квадрокоптеры</a>
         </li>
       </ul>
-
     </section>
 
     <!--3.3.блок услуг (слайдер)  -->
     <section class="services-slider">
-
       <h2 class="visually-hidden">Услуги</h2>
-
       <!--переключатель слайдов-->
       <div class="services-slider-tumbler">
         <!--временное решение на радиокнопках-->
-
         <input type="radio" name="services-slide-radio" id="services-slide-radio1" checked>
         <input type="radio" name="services-slide-radio" id="services-slide-radio2" checked>
         <input type="radio" name="services-slide-radio" id="services-slide-radio3" checked>
 
-        <label for="services-slide-radio1">Доставка</label>
-        <label for="services-slide-radio2">Гарантия</label>
-        <label for="services-slide-radio3">Кредит</label>
-
+        <label class="button" for="services-slide-radio1">Доставка</label>
+        <label class="button" for="services-slide-radio2">Гарантия</label>
+        <label class="button" for="services-slide-radio3">Кредит</label>
       </div>
 
       <!--контейнер слайдов-->
       <div class="services-slides-container">
-
         <section class="service-slide service-slide1">
           <h3>Доставка</h3>
           <!--делать ли здесь ссылку?-->
@@ -181,43 +168,57 @@
             Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
           </p>
         </section>
-
       </div>
-
     </section>
 
     <!--3.4.блок партнеров  -->
     <section class="partners">
-
       <h2 class="visually-hidden">Список наших партнеров</h2>
-
       <ul class="partners-list">
         <li>
           <a href="#">
-          <img src="images/dji.svg" width="260" height="100" alt="лейбл компании DJI">
+            <img src="images/dji.svg" width="260" height="100" alt="лейбл компании DJI">
           </a>
         </li>
 
         <li>
           <a href="#">
-          <img src="images/sp_gadjets.svg" width="260" height="100" alt="лейбл компании SP Gadjets">
+            <img src="images/sp_gadjets.svg" width="260" height="100" alt="лейбл компании SP Gadjets">
           </a>
         </li>
 
         <li>
           <a href="#">
-          <img src="images/go_pro.svg" width="260" height="100" alt="лейбл компании Go Pro">
+            <img src="images/go_pro.svg" width="260" height="100" alt="лейбл компании Go Pro">
           </a>
         </li>
 
         <li>
           <a href="#">
-          <img src="images/vive.svg" width="260" height="100" alt="лейбл компании Vive">
+            <img src="images/vive.svg" width="260" height="100" alt="лейбл компании Vive">
           </a>
         </li>
       </ul>
-
     </section>
+
+    <!--3.5.блок информации "о нас"-->
+    <section class="info">
+      <h2>О нас</h2>
+      <p>
+        Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+      </p>
+      <p>
+        Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
+      </p>
+      <ul class="delivery-companies">
+        <li>Деловые Линии</li>
+        <li>Автотрейдинг</li>
+        <li>ЖелДорЭкспедиция</li>
+      </ul>
+      <a class="button" href="info.html">Подробнее о нас</a>
+    </section>
+
+
 
   </main>
 
