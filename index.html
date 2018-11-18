@@ -3,6 +3,7 @@
 1.мета-информация
 2.хедер страницы
 3.основное содержимое страницы
+  3.1.блок спец. предложений (слайдер)
 4.футер страницы
 5.модальные окна
 -->
@@ -12,61 +13,101 @@
 <html lang="ru">
 
 <!--1.мета-информация-->
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
-  </head>
 
-  <body>
-<!--2.хедер страницы-->
-    <header class="main-header">
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Девайс</title>
+</head>
 
-      <a class="main-header-logo">
-        <img src="images/index-logo.svg" width="164" height="36" alt="логотип магазина Девайс">
-      </a>
+<body>
+  <!--2.хедер страницы-->
+  <header class="main-header">
 
-      <form class="main-header-search">
-        <label>
-          Поиск по сайту
-          <input type="search" name="search">
-        </label>
-        <button class="search-button" type="submit">Искать</button>
-      </form>
+    <a class="main-header-logo">
+      <img src="images/index-logo.svg" width="164" height="36" alt="логотип магазина Девайс">
+    </a>
 
-      <nav class="main-navigation">
+    <form class="main-header-search">
+      <label>
+        Поиск по сайту
+        <input type="search" name="search">
+      </label>
+      <button class="search-button" type="submit">Искать</button>
+    </form>
 
-        <ul class="user-navigation unauthorized-user-navigation">
-          <li>
-            <a class="navigation-link login-link" href="#">Войти</a>
-          </li>
-        </ul>
+    <nav class="main-navigation">
 
-        <a class="navigation-link navigation-compare-link" href="#">Сравнить</a>
+      <ul class="user-navigation unauthorized-user-navigation">
+        <li>
+          <a class="navigation-link login-link" href="#">Войти</a>
+        </li>
+      </ul>
 
-        <a class="navigation-link navigation-basket-link" href="#">Корзина</a>
+      <a class="navigation-link navigation-compare-link" href="#">Сравнить</a>
 
-        <ul class="site-navigation">
-          <li>
-            <a href="deliver.html">Доставка</a>
-          </li>
-          <li>
-            <a href="warranty.html">Гарантия</a>
-          </li>
-          <li>
-            <a href="contacts.html">Контакты</a>
-          </li>
-        </ul>
+      <a class="navigation-link navigation-basket-link" href="#">Корзина</a>
 
-          <a class="catalog-navigation-link" href="catalog.html">Каталог товаров</a>
+      <ul class="site-navigation">
+        <li>
+          <a href="deliver.html">Доставка</a>
+        </li>
+        <li>
+          <a href="warranty.html">Гарантия</a>
+        </li>
+        <li>
+          <a href="contacts.html">Контакты</a>
+        </li>
+      </ul>
 
-      </nav>
+      <a class="catalog-navigation-link" href="catalog.html">Каталог товаров</a>
+
+    </nav>
+
+  </header>
+
+  <!--3.основное содержимое страницы-->
+  <main class="main-content">
+
+    <h1 class="visually-hidden">Магазин цифровой техники и аксессуаров "Девайс"</h1>
+    <!--3.1.блок спец. предложений (слайдер)-->
+    <section class="special-offers-slider">
+      <h2 class="visually-hidden">Специальные предложения</h2>
+
+      <!--первый слайд-->
+      <section class="special-offer-slide slide1">
+        <h3 class="visually-hidden">Восьмиметровая селфи-палка</h3>
+        <p class="special-offer-photo">
+          <img src="images/offer1.svg" width="384" height="486" alt="Фотография восьмиметровой селфи-палки">
+        </p>
+        <p class="special-offer-description">
+          <b>Делай селфи,<br> как Бен Стиллер!</b>
+          Самая длинная палка для селфи доступна в нашем магазине.
+          Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+        </p>
+        <a class="special-offer-link" href="catalog-item.html">Подробнее</a>
+        <table class="special-offer-options">
+          <tr class="table-header">
+            <th>Длина палки</th>
+            <th>Вес палки</th>
+            <th>Материал</th>
+          </tr>
+          <tr class="table-content">
+            <td>8,5 м</td>
+            <td>5 кг</td>
+            <td>Карбон</td>
+          </tr>
+        </table>
+      </section>
+
+      <!--здесь будет еще 2 таких же слайда -->
+
+      <!--переключатель слайдов  -->
+      <span class="special-offers-tumbler"></span>
+
+    </section>
+  </main>
 
 
+</body>
 
-
-    </header>
-
-
-
-  </body>
 </html>
