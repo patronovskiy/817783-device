@@ -3,53 +3,50 @@
 1.мета-информация
 2.хедер страницы
 3.основное содержимое страницы
-  3.1.блок спец. предложений (слайдер)
-  3.2.блок категорий товаров (разделов)
-  3.3.блок услуг (слайдер)
-  3.4.блок партнеров
-  3.5.блок информации "о нас"
-  3.6.блок контактов
+3.1.блок спец. предложений (слайдер)
+3.2.блок категорий товаров (разделов)
+3.3.блок услуг (слайдер)
+3.4.блок партнеров
+3.5.блок информации "о нас"
+3.6.блок контактов
 4.футер страницы
 5.модальные окна
 -->
-
 <!--1.мета-информация-->
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Девайс</title>
+  </head>
+  <!--2.хедер страницы-->
+  <body>
+    <header class="main-header">
 
-<head>
-  <meta charset="utf-8">
-  <title>HTML Academy: Девайс</title>
-</head>
+      <a class="main-header-logo">
+        <img src="images/header-logo.svg" width="164" height="36" alt="логотип магазина Девайс">
+      </a>
 
-<!--2.хедер страницы-->
+      <form class="main-header-search">
+        <label>
+          Поиск по сайту
+          <input type="search" name="search">
+        </label>
+        <button class="search-button" type="submit">Искать</button>
+      </form>
 
-<body>
-  <header class="main-header">
-    <a class="main-header-logo">
-      <img src="images/header-logo.svg" width="164" height="36" alt="логотип магазина Девайс">
-    </a>
-
-    <form class="main-header-search">
-      <label>
-        Поиск по сайту
-        <input type="search" name="search">
-      </label>
-      <button class="search-button" type="submit">Искать</button>
-    </form>
-
-    <nav class="main-navigation">
       <ul class="user-navigation">
         <li>
           <a class="navigation-link login-link" href="#">Войти</a>
         </li>
       </ul>
+      
+      <div class="user-options">
+        <a class="navigation-link navigation-compare-link" href="#">Сравнить</a>
+        <a class="navigation-link navigation-basket-link" href="#">Корзина</a>
+      </div>
 
-      <a class="navigation-link navigation-compare-link" href="#">Сравнить</a>
-
-      <a class="navigation-link navigation-basket-link" href="#">Корзина</a>
-
-      <ul class="site-navigation">
+      <ul class="shop-options">
         <li>
           <a href="deliver.html">Доставка</a>
         </li>
@@ -61,15 +58,15 @@
         </li>
       </ul>
 
+    <nav class="main-navigation">
       <a class="catalog-navigation-link" href="catalog.html">Каталог товаров</a>
     </nav>
+
   </header>
 
   <!--3.основное содержимое страницы-->
   <main class="main-content">
-
     <h1 class="visually-hidden">Магазин цифровой техники и аксессуаров "Девайс"</h1>
-
     <!--3.1.блок спец. предложений (слайдер)-->
     <section class="special-offers-slider">
       <h2 class="visually-hidden">Специальные предложения</h2>
@@ -102,7 +99,6 @@
       </section>
       <!--здесь будет еще 2 таких же слайда -->
     </section>
-
     <!--3.2.блок категорий товаров (разделов) -->
     <section class="product-categories">
       <h2 class="visually-hidden">Список категорий товаров</h2>
@@ -128,7 +124,6 @@
         </li>
       </ul>
     </section>
-
     <!--3.3.блок услуг (слайдер)  -->
     <section class="services-slider">
       <h2 class="visually-hidden">Услуги</h2>
@@ -138,12 +133,10 @@
         <input type="radio" name="services-slide-radio" id="services-slide-radio1" checked>
         <input type="radio" name="services-slide-radio" id="services-slide-radio2" checked>
         <input type="radio" name="services-slide-radio" id="services-slide-radio3" checked>
-
         <label class="button" for="services-slide-radio1">Доставка</label>
         <label class="button" for="services-slide-radio2">Гарантия</label>
         <label class="button" for="services-slide-radio3">Кредит</label>
       </div>
-
       <!--контейнер слайдов-->
       <div class="services-slides-container">
         <section class="service-slide service-slide1">
@@ -153,14 +146,12 @@
             Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
           </p>
         </section>
-
         <section class="service-slide service-slide2">
           <h3>Гарантия</h3>
           <p>
             Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
           </p>
         </section>
-
         <section class="service-slide service-slide1">
           <h3>Кредит</h3>
           <p>
@@ -169,7 +160,6 @@
         </section>
       </div>
     </section>
-
     <!--3.4.блок партнеров  -->
     <section class="partners">
       <h2 class="visually-hidden">Список наших партнеров</h2>
@@ -179,19 +169,16 @@
             <img src="images/dji.svg" width="260" height="100" alt="лейбл компании DJI">
           </a>
         </li>
-
         <li>
           <a href="#">
             <img src="images/sp_gadjets.svg" width="260" height="100" alt="лейбл компании SP Gadjets">
           </a>
         </li>
-
         <li>
           <a href="#">
             <img src="images/go_pro.svg" width="260" height="100" alt="лейбл компании Go Pro">
           </a>
         </li>
-
         <li>
           <a href="#">
             <img src="images/vive.svg" width="260" height="100" alt="лейбл компании Vive">
@@ -199,7 +186,6 @@
         </li>
       </ul>
     </section>
-
     <!--3.5.блок информации "о нас"-->
     <section class="info">
       <h2>О нас</h2>
@@ -216,7 +202,6 @@
       </ul>
       <a class="button" href="info.html">Подробнее о нас</a>
     </section>
-
     <!--3.6.блок контактов  -->
     <section class="contacts">
       <h2>Контакты</h2>
@@ -229,25 +214,24 @@
       <a class="button" href="contacts.html">Напишите нам</a>
     </section>
   </main>
-
   <!--4.футер страницы-->
   <footer class="main-footer">
     <a class="footer-logo">
       <img src="images/index-footer-logo.svg" width="163" height="36" alt="логотип магазина Девайс">
     </a>
-
-    <nav class="footer-navigation">
+    
       <ul class="footer-user-navigation">
         <li>
           <a class="navigation-link login-link" href="#">Войти</a>
         </li>
       </ul>
 
+      <div class="footer-user-options">
       <a class="navigation-link navigation-compare-link" href="#">Сравнить</a>
-
       <a class="navigation-link navigation-basket-link" href="#">Корзина</a>
+      </div>
 
-      <ul class="footer-site-navigation">
+      <ul class="footer-shop-options">
         <li>
           <a href="deliver.html">Доставка</a>
         </li>
@@ -261,7 +245,6 @@
 
       <p class="address">г. Москва, ул. Строителей, 15</p>
       <p class="phone"><a href="#">Тел.: +7 (495) 495-95-95</a></p>
-
       <ul class="footer-social-links">
         <li>
           <a class="social-button social-button-fb">Facebook</a>
@@ -273,15 +256,11 @@
           <a class="social-button social-button-tw">Twitter</a>
         </li>
       </ul>
-
       <a class="developer-button" href="https://htmlacademy.ru">
         HTML Academy
         <img src="images/html_academy_logo.svg" width="27" height="35" alt="логотип HTML Academy">
       </a>
 
-    </nav>
   </footer>
-
 </body>
-
 </html>
