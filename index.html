@@ -22,11 +22,9 @@
   <!--2.хедер страницы-->
   <body>
     <header class="main-header">
-
       <a class="main-header-logo">
         <img src="images/header-logo.svg" width="164" height="36" alt="логотип магазина Девайс">
       </a>
-
       <form class="main-header-search">
         <label>
           Поиск по сайту
@@ -34,7 +32,6 @@
         </label>
         <button class="search-button" type="submit">Искать</button>
       </form>
-
       <ul class="user-navigation">
         <li>
           <a class="navigation-link login-link" href="#">Войти</a>
@@ -45,7 +42,6 @@
         <a class="navigation-link navigation-compare-link" href="#">Сравнить</a>
         <a class="navigation-link navigation-basket-link" href="#">Корзина</a>
       </div>
-
       <ul class="shop-options">
         <li>
           <a href="deliver.html">Доставка</a>
@@ -57,180 +53,174 @@
           <a href="contacts.html">Контакты</a>
         </li>
       </ul>
-
-    <nav class="main-navigation">
-      <a class="catalog-navigation-link" href="catalog.html">Каталог товаров</a>
-    </nav>
-
-  </header>
-
-  <!--3.основное содержимое страницы-->
-  <main class="main-content">
-    <h1 class="visually-hidden">Магазин цифровой техники и аксессуаров "Девайс"</h1>
-    <!--3.1.блок спец. предложений (слайдер)-->
-    <section class="special-offers-slider">
-      <h2 class="visually-hidden">Специальные предложения</h2>
-      <!--переключатель слайдов  -->
-      <div class="special-offers-tumbler"></div>
-      <!--первый слайд-->
-      <section class="special-offer-slide slide1">
-        <h3 class="visually-hidden">Восьмиметровая селфи-палка</h3>
-        <p class="special-offer-photo">
-          <img src="images/offer1.svg" width="384" height="486" alt="Фотография восьмиметровой селфи-палки">
-        </p>
-        <p class="special-offer-description">
-          <b>Делай селфи,<br> как Бен Стиллер!</b>
-          Самая длинная палка для селфи доступна в нашем магазине.
-          Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
-        </p>
-        <a class="special-offer-link button" href="catalog-item.html">Подробнее</a>
-        <table class="special-offer-options">
-          <tr class="table-header">
-            <th>Длина палки</th>
-            <th>Вес палки</th>
-            <th>Материал</th>
-          </tr>
-          <tr class="table-content">
-            <td>8,5 м</td>
-            <td>5 кг</td>
-            <td>Карбон</td>
-          </tr>
-        </table>
+      <nav class="main-navigation">
+        <a class="catalog-navigation-link" href="catalog.html">Каталог товаров</a>
+      </nav>
+    </header>
+    <!--3.основное содержимое страницы-->
+    <main class="main-content">
+      <h1 class="visually-hidden">Магазин цифровой техники и аксессуаров "Девайс"</h1>
+      <!--3.1.блок спец. предложений (слайдер)-->
+      <section class="special-offers-slider">
+        <h2 class="visually-hidden">Специальные предложения</h2>
+        <!--переключатель слайдов  -->
+        <div class="special-offers-tumbler"></div>
+        <!--первый слайд-->
+        <section class="special-offer-slide slide1">
+          <p class="special-offer-photo">
+            <img src="images/offer1.svg" width="384" height="486" alt="Фотография восьмиметровой селфи-палки">
+          </p>
+          <h3>Делай селфи, как Бен Стиллер!</h3>
+          <p class="special-offer-description">
+            Самая длинная палка для селфи доступна в нашем магазине.
+            Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
+          </p>
+          <a class="special-offer-link button" href="catalog-item.html">Подробнее</a>
+          <table class="special-offer-options">
+            <tr class="table-header">
+              <th>Длина палки</th>
+              <th>Вес палки</th>
+              <th>Материал</th>
+            </tr>
+            <tr class="table-content">
+              <td>8,5 м</td>
+              <td>5 кг</td>
+              <td>Карбон</td>
+            </tr>
+          </table>
+        </section>
+        <!--здесь будет еще 2 таких же слайда -->
       </section>
-      <!--здесь будет еще 2 таких же слайда -->
-    </section>
-    <!--3.2.блок категорий товаров (разделов) -->
-    <section class="product-categories">
-      <h2 class="visually-hidden">Список категорий товаров</h2>
-      <ul class="product-categories-list">
-        <li>
-          <a class="product-category category-vr" href="#">Виртуальная реальность</a>
-          <!--здесь иконка категории - фон или img?-->
-        </li>
-        <li>
-          <a class="product-category category-monopods" href="#">Моноподы для селфи</a>
-        </li>
-        <li>
-          <a class="product-category category-cameras" href="#">Экшн-камеры</a>
-        </li>
-        <li>
-          <a class="product-category category-fitness" href="#">Фитнес-браслеты</a>
-        </li>
-        <li>
-          <a class="product-category category-clocks" href="#">Умные часы</a>
-        </li>
-        <li>
-          <a class="product-category category-quadcopters" href="#">Квадрокоптеры</a>
-        </li>
-      </ul>
-    </section>
-    <!--3.3.блок услуг (слайдер)  -->
-    <section class="services-slider">
-      <h2 class="visually-hidden">Услуги</h2>
-      <!--переключатель слайдов-->
-      <div class="services-slider-tumbler">
-        <!--временное решение на радиокнопках-->
-        <input type="radio" name="services-slide-radio" id="services-slide-radio1" checked>
-        <input type="radio" name="services-slide-radio" id="services-slide-radio2" checked>
-        <input type="radio" name="services-slide-radio" id="services-slide-radio3" checked>
-        <label class="button" for="services-slide-radio1">Доставка</label>
-        <label class="button" for="services-slide-radio2">Гарантия</label>
-        <label class="button" for="services-slide-radio3">Кредит</label>
-      </div>
-      <!--контейнер слайдов-->
-      <div class="services-slides-container">
-        <section class="service-slide service-slide1">
-          <h3>Доставка</h3>
-          <!--делать ли здесь ссылку?-->
-          <p>
-            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
-          </p>
-        </section>
-        <section class="service-slide service-slide2">
-          <h3>Гарантия</h3>
-          <p>
-            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
-          </p>
-        </section>
-        <section class="service-slide service-slide1">
-          <h3>Кредит</h3>
-          <p>
-            Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
-          </p>
-        </section>
-      </div>
-    </section>
-    <!--3.4.блок партнеров  -->
-    <section class="partners">
-      <h2 class="visually-hidden">Список наших партнеров</h2>
-      <ul class="partners-list">
-        <li>
-          <a href="#">
-            <img src="images/dji.svg" width="260" height="100" alt="лейбл компании DJI">
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="images/sp_gadjets.svg" width="260" height="100" alt="лейбл компании SP Gadjets">
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="images/go_pro.svg" width="260" height="100" alt="лейбл компании Go Pro">
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="images/vive.svg" width="260" height="100" alt="лейбл компании Vive">
-          </a>
-        </li>
-      </ul>
-    </section>
-    <!--3.5.блок информации "о нас"-->
-    <section class="info">
-      <h2>О нас</h2>
-      <p>
-        Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
-      </p>
-      <p>
-        Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
-      </p>
-      <ul class="delivery-companies">
-        <li>Деловые Линии</li>
-        <li>Автотрейдинг</li>
-        <li>ЖелДорЭкспедиция</li>
-      </ul>
-      <a class="button" href="info.html">Подробнее о нас</a>
-    </section>
-    <!--3.6.блок контактов  -->
-    <section class="contacts">
-      <h2>Контакты</h2>
-      <p>
-        Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
-      </p>
-      <a class="map-link" href="#">
-        <img src="images/map.jpg" width="560" height="222" alt="Наш адрес - Москва, ул. Строителей, 15">
+      <!--3.2.блок категорий товаров (разделов) -->
+      <section class="product-categories">
+        <h2 class="visually-hidden">Список категорий товаров</h2>
+        <ul class="product-categories-list">
+          <li>
+            <a class="product-category category-vr" href="#">Виртуальная реальность</a>
+            <!--здесь иконка категории - фон или img?-->
+          </li>
+          <li>
+            <a class="product-category category-monopods" href="#">Моноподы для селфи</a>
+          </li>
+          <li>
+            <a class="product-category category-cameras" href="#">Экшн-камеры</a>
+          </li>
+          <li>
+            <a class="product-category category-fitness" href="#">Фитнес-браслеты</a>
+          </li>
+          <li>
+            <a class="product-category category-clocks" href="#">Умные часы</a>
+          </li>
+          <li>
+            <a class="product-category category-quadcopters" href="#">Квадрокоптеры</a>
+          </li>
+        </ul>
+      </section>
+      <!--3.3.блок услуг (слайдер)  -->
+      <section class="services-slider">
+        <h2 class="visually-hidden">Услуги</h2>
+        <!--переключатель слайдов-->
+        <div class="services-slider-tumbler">
+          <!--временное решение на радиокнопках-->
+          <input type="radio" name="services-slide-radio" id="services-slide-radio1" checked>
+          <input type="radio" name="services-slide-radio" id="services-slide-radio2" checked>
+          <input type="radio" name="services-slide-radio" id="services-slide-radio3" checked>
+          <label class="button" for="services-slide-radio1">Доставка</label>
+          <label class="button" for="services-slide-radio2">Гарантия</label>
+          <label class="button" for="services-slide-radio3">Кредит</label>
+        </div>
+        <!--контейнер слайдов-->
+        <div class="services-slides-container">
+          <section class="service-slide service-slide1">
+            <h3>Доставка</h3>
+            <!--делать ли здесь ссылку?-->
+            <p>
+              Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+            </p>
+          </section>
+          <section class="service-slide service-slide2">
+            <h3>Гарантия</h3>
+            <p>
+              Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+            </p>
+          </section>
+          <section class="service-slide service-slide1">
+            <h3>Кредит</h3>
+            <p>
+              Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.
+            </p>
+          </section>
+        </div>
+      </section>
+      <!--3.4.блок партнеров  -->
+      <section class="partners">
+        <h2 class="visually-hidden">Список наших партнеров</h2>
+        <ul class="partners-list">
+          <li>
+            <a href="#">
+              <img src="images/dji.svg" width="260" height="100" alt="лейбл компании DJI">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/sp_gadjets.svg" width="260" height="100" alt="лейбл компании SP Gadjets">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/go_pro.svg" width="260" height="100" alt="лейбл компании Go Pro">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/vive.svg" width="260" height="100" alt="лейбл компании Vive">
+            </a>
+          </li>
+        </ul>
+      </section>
+      <!--3.5.блок информации "о нас"-->
+      <section class="info">
+        <h2>О нас</h2>
+        <p>
+          Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+        </p>
+        <p>
+          Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:
+        </p>
+        <ul class="delivery-companies">
+          <li>Деловые Линии</li>
+          <li>Автотрейдинг</li>
+          <li>ЖелДорЭкспедиция</li>
+        </ul>
+        <a class="button" href="info.html">Подробнее о нас</a>
+      </section>
+      <!--3.6.блок контактов  -->
+      <section class="contacts">
+        <h2>Контакты</h2>
+        <p>
+          Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.
+        </p>
+        <a class="map-link" href="#">
+          <img src="images/map.jpg" width="560" height="222" alt="Наш адрес - Москва, ул. Строителей, 15">
+        </a>
+        <a class="button" href="contacts.html">Напишите нам</a>
+      </section>
+    </main>
+    <!--4.футер страницы-->
+    <footer class="main-footer">
+      <a class="footer-logo">
+        <img src="images/index-footer-logo.svg" width="163" height="36" alt="логотип магазина Девайс">
       </a>
-      <a class="button" href="contacts.html">Напишите нам</a>
-    </section>
-  </main>
-  <!--4.футер страницы-->
-  <footer class="main-footer">
-    <a class="footer-logo">
-      <img src="images/index-footer-logo.svg" width="163" height="36" alt="логотип магазина Девайс">
-    </a>
-    
+      
       <ul class="footer-user-navigation">
         <li>
           <a class="navigation-link login-link" href="#">Войти</a>
         </li>
       </ul>
-
       <div class="footer-user-options">
-      <a class="navigation-link navigation-compare-link" href="#">Сравнить</a>
-      <a class="navigation-link navigation-basket-link" href="#">Корзина</a>
+        <a class="navigation-link navigation-compare-link" href="#">Сравнить</a>
+        <a class="navigation-link navigation-basket-link" href="#">Корзина</a>
       </div>
-
       <ul class="footer-shop-options">
         <li>
           <a href="deliver.html">Доставка</a>
@@ -242,7 +232,6 @@
           <a href="contacts.html">Контакты</a>
         </li>
       </ul>
-
       <p class="address">г. Москва, ул. Строителей, 15</p>
       <p class="phone"><a href="#">Тел.: +7 (495) 495-95-95</a></p>
       <ul class="footer-social-links">
@@ -260,7 +249,6 @@
         HTML Academy
         <img src="images/html_academy_logo.svg" width="27" height="35" alt="логотип HTML Academy">
       </a>
-
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
