@@ -356,6 +356,8 @@
     <section class="modal modal-feedback">
       <h2 class="visually-hidden">Напишите нам!</h2>
 
+       <button class="modal-close" type="button" title="Закрыть окно"><span class="visually-hidden">Закрыть</span></button>
+
       <form class="feedback" action="#" method="post">
 
         <label for="name-field" class="feedback-label">
@@ -367,9 +369,7 @@
         <input type="email" class="feedback-field" name="email" id="email-field" placeholder="email@example.com">
 
         <label for="message-field" class="feedback-label">Текст письма:</label>
-        <textarea class="feedback-field" name="message" id="message-field">
-          В свободной форме
-        </textarea>
+        <textarea class="feedback-field" name="message" id="message-field" placeholder="В свободной форме"></textarea>
         
         <button class="button" type="submit">Отправить</button>
 
