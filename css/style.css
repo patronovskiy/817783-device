@@ -1,25 +1,186 @@
 /*стилевой файл для проекта Device
 содержание
 1. подключение шрифтов
-2.стили хедера
+2. основные стили для body
+3.стили хедера
 
 */
 
 /*1.подключение шрифтов*/
 
 @font-face {
-	font-fammily: "Gilroy";
+	font-family: "Gilroy";
 	src: url("../fonts/Gilroylight.woff2") format("woff2");
 	font-weight: 300;
 	font-style: normal;
 }
 
 @font-face {
-	font-fammily: "Gilroy - Extrabold";
+	font-family: "Gilroy - Extra Bold";
 	src: url("../fonts/Gilroyextrabold.woff2") format("woff2");
-	font-weight: bold;
+	font-weight: 400px;
 	font-style: normal;
 }
 
-/*2.стили хедера*/
+/*2. основные стили для body*/
+
+body {
+	margin: 0;
+	padding: 0;
+
+	font-family:"Open Sans", Arial, sans-serif;
+	font-size: 15px;
+	line-height: 30px;
+	font-weight: 300;
+	font-style: normal;
+	color: #464646;
+
+	background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*
+.visually-hidden {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+}
+*/
+
+/*3.стили хедера*/
+
+.main-header {
+	color: #000000;
+
+	background-color: #f8e296;
+	background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 12%, #f8e296 12%, #f8e296 100%);
+}
+
+.main-header-logo {
+	opacity: 1;
+}
+
+.main-header-logo:hover {
+	opacity: 0.6;
+}
+
+.main-header-logo:active {
+	opacity: 0.5;
+}
+
+.search {
+	background-color: transparent;
+	border: none;
+}
+
+.search ~ label {
+	color: #464646;
+
+	opacity: 0.3;
+}
+
+.search:hover ~ label {
+	opacity: 0.6;
+}
+
+.search:focus ~ label {
+	opacity: 0;
+}
+
+.search:focus {
+	border-bottom: 2px solid #000000;
+	outline: none;
+}
+
+/*как лучше скрыть кнопку, когда она в состоянии покоя?*/
+.search-button {
+color: #000000;
+font-family: "Open Sans";
+font-size: 15px;
+font-weight: 300;
+line-height: 30px;
+
+background-color: transparent;
+border: 2px solid #000000;
+}
+
+.search-button:hover,
+.search-button:focus {
+	color: #ffffff;
+	background-color: #000000;
+	outline: none;
+}
+
+.search-button:active {
+	color: rgba(255, 255, 255, 0.3);
+	outline: none
+}
+
+.user-navigation {
+	list-style: none;
+}
+
+.navigation-link:focus,
+.navigation-link:hover {
+	opacity: 0.6;
+}
+
+.navigation-link:active {
+	opacity: 0.3;
+}
+
+.shop-options {
+	list-style: none;
+}
+
+.shop-options a {
+	font-family: "Gilroy - Extra Bold";
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 24px;
+	text-transform: uppercase;
+}
+
+.shop-options a:hover,
+.shop-options a:focus {
+	opacity: 0.6;
+}
+
+.shop-options a:active {
+	opacity: 0.3;
+}
+
+.catalog-navigation {
+	background-color: transparent;
+	border: none;
+
+	font-family: "Gilroy - Extra Bold";
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 24px;
+	text-transform: uppercase;
+}
+
+.catalog-navigation:hover,
+.catalog-navigation:focus {
+	opacity: 0.6;
+	outline: none;
+}
+
+.catalog-navigation:active {
+	opacity: 0.3;
+	outline: none;
+}
+
+.main-navigation-list {
+	list-style: none;
+	line-height: 36px;
+}
+
 

@@ -23,17 +23,15 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <!--2.хедер страницы-->
-  <body class="inner-page-body">
+  <body>
     <header class="main-header">
       <a class="main-header-logo">
         <img src="img/header-logo.svg" width="164" height="36" alt="логотип магазина Девайс">
       </a>
       <form class="main-header-search" action="#" method="post">
-        <label>
-          Поиск по сайту
-          <input type="search" name="search">
-        </label>
-        <button class="search-button" type="submit"><span class="visually-hidden">Искать</span></button>
+          <input type="search" name="search" class="search" id="search-field">
+          <label for="serch-field">Поиск по сайту</label>
+        <button class="search-button" type="submit">Найти</button>
       </form>
       <ul class="user-navigation">
         <li>
@@ -57,7 +55,7 @@
         </li>
       </ul>
       <nav class="main-navigation">
-        <button class="catalog-navigation">Каталог товаров</button>
+        <button class="catalog-navigation">Каталог товаров</button>   <!--все-таки ссылка или кнопка?-->
         <ul class="main-navigation-list">
           <li class="navigation-item"><a href="#">Виртуальная реальность</a></li>
           <li class="navigation-item"><a href="catalog.html">Моноподы для селфи</a></li>
