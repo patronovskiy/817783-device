@@ -1,0 +1,25 @@
+/*стилевой файл для проекта Device
+содержание
+1. подключение шрифтов
+2.стили хедера
+
+*/
+
+/*1.подключение шрифтов*/
+
+@font-face {
+	font-fammily: "Gilroy";
+	src: url("../fonts/Gilroylight.woff2") format("woff2");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-fammily: "Gilroy - Extrabold";
+	src: url("../fonts/Gilroyextrabold.woff2") format("woff2");
+	font-weight: bold;
+	font-style: normal;
+}
+
+/*2.стили хедера*/
+
