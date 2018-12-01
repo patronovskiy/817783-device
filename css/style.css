@@ -11,6 +11,13 @@
 	4.5.блоки информации "о нас" и контактов, объединены в div.columns
 5.стили футера
 6.модальные окна
+7.стилизация уникального содержимого внутренней страницы
+	7.1. заголовок и хлебные крошки
+	7.2.фильтры и сортировка
+	7.3.каталог товаров
+	7.4.пагинация
+
+
 */
 /*1.подключение шрифтов*/
 @font-face {
@@ -65,9 +72,17 @@ a {
     background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 30%, #f0c52e 30%, #f0c52e 70%, #ffffff 70%, #ffffff 100%);
 }
 
+/*эта кнопка во внутренней странице в фильтрах*/
+.filters-form .button {
+    background-color: #eeeeee;
+    background-image: linear-gradient(to bottom, #eeeeee 0%, #eeeeee 30%, #f0c52e 30%, #f0c52e 70%, #eeeeee 70%, #eeeeee 100%);
+}
+
 .button:hover,
 .button:focus {
+    cursor: pointer;
     /*outline: none;*/
+
     background-color: #f0c52e;
     background-image: none;
 }
@@ -520,4 +535,206 @@ a {
 .modal-map {
     width: 960px;
     height: 560px;
+}
+
+/*7.стилизация уникального содержимого внутренней страницы*/
+/*7.1. заголовок и хлебные крошки*/
+.inner-page h1 {
+    font-family: "Gilroy - Extra Bold", Arial, sans-serif;
+    font-size: 47px;
+    font-weight: 400;
+    line-height: 48px;
+
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.breadscrumbs {
+    list-style: none;
+}
+
+.breadscrumbs a,
+.breadscrumbs-current {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+
+    opacity: 0.3;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.breadscrumbs a:hover,
+.breadscrumbs a:focus,
+.breadscrumbs-current:hover {
+    opacity: 0.6;
+}
+
+.breadscrumbs a:active {
+    opacity: 0.1;
+}
+
+/*7.2.фильтры и сортировка*/
+
+.filters,
+.sorting {
+    color: #000000;
+    background-color: rgba(220,220,220, 0.4);
+}
+
+.filters h2,
+.sorting h2 {
+    font-family: "Gilroy - Extra Bold", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    text-transform: uppercase;
+}
+
+.filters-form fieldset {
+    text-align: left;
+
+    border: none;
+}
+
+.price-filter label,
+.filters-form legend {
+    font-family: "Gilroy - Extra Bold", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.filters-form label {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 40px;
+}
+
+.filters-form input:disabled {
+    color: #a6a6a6;
+}
+
+.sorting-item {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+
+    opacity: 0.3;
+    color: #000000;
+}
+
+.sorting-item:hover,
+.sorting-item:focus {
+    opacity: 0.6;
+}
+
+.sorting-item:active {
+    opacity: 1;
+}
+
+.sorting-type {
+    opacity: 0.2;
+}
+
+.sorting-type:hover,
+.sorting-type:focus {
+    opacity: 0.4;
+}
+
+.sorting-type:active {
+    opacity: 1;
+}
+
+/*7.3.каталог товаров*/
+
+.catalog-list {
+    list-style: none;
+}
+
+.catalog-item-link:hover p,
+.catalog-item-link:focus p {
+    opacity: 0.7;
+}
+
+.catalog-item-link:hover ~ button,
+.catalog-item-link:focus ~ button {
+    /*появление кнопок - visibility или display или что-то еще?*/
+}
+
+.compare-button {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 36px;
+
+    opacity: 0.5;
+    color: #000000;
+    border: none;
+    background-color: transparent;
+    background-image: none;
+}
+
+.compare-button:hover,
+.compare-button:focus {
+    cursor: pointer;
+
+    opacity: 1;
+    /*outline: none;*/
+}
+
+.compare-button:active {
+    opacity: 0.2;
+    /*outline: none;*/
+}
+
+.catalog-item h3 {
+    font-family: "Gilroy - Extra Bold", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+
+    color: #000000;
+}
+
+/*7.4.пагинация*/
+
+.pagination-list {
+    font-family: "Gilroy - Extra Bold", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    list-style: none;
+
+    text-align: center;
+    vertical-align: center;
+    text-transform: uppercase;
+
+    color: #000000;
+    background-color: #ebebeb;
+}
+
+.pagination-way:hover,
+.pagination-way:focus {
+    background-color: #d8d8d8;
+}
+
+.pagination-way:active {
+    opacity: 0.3;
+}
+
+.pagination-number {
+    opacity: 0.3;
+}
+
+.pagination-number:hover,
+.pagination-number:focus {
+    opacity: 0.6;
+}
+
+.pagination-number:active {
+    opacity: 1;
 }
