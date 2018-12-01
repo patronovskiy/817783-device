@@ -1,186 +1,523 @@
 /*стилевой файл для проекта Device
 содержание
 1. подключение шрифтов
-2. основные стили для body
+2.общие стили и основные стили для body
 3.стили хедера
-
+4.стили основного содержимого
+	4.1. слайдер спец предложений
+	4.2.блок категорий товаров (разделов)
+	4.3.блок услуг (слайдер)
+	4.4.блок производителей
+	4.5.блоки информации "о нас" и контактов, объединены в div.columns
+5.стили футера
+6.модальные окна
 */
-
 /*1.подключение шрифтов*/
-
 @font-face {
-	font-family: "Gilroy";
-	src: url("../fonts/Gilroylight.woff2") format("woff2");
-	font-weight: 300;
-	font-style: normal;
+    font-family: "Gilroy";
+    font-weight: 300;
+    font-style: normal;
+
+    src: url("../fonts/Gilroylight.woff2") format("woff2");
 }
 
 @font-face {
-	font-family: "Gilroy - Extra Bold";
-	src: url("../fonts/Gilroyextrabold.woff2") format("woff2");
-	font-weight: 400px;
-	font-style: normal;
+    font-family: "Gilroy - Extra Bold";
+    font-weight: 400px;
+    font-style: normal;
+
+    src: url("../fonts/Gilroyextrabold.woff2") format("woff2");
 }
 
-/*2. основные стили для body*/
-
+/*2. общие стили и основные стили для body*/
 body {
-	margin: 0;
-	padding: 0;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 30px;
 
-	font-family:"Open Sans", Arial, sans-serif;
-	font-size: 15px;
-	line-height: 30px;
-	font-weight: 300;
-	font-style: normal;
-	color: #464646;
+    margin: 0;
+    padding: 0;
 
-	background-color: #ffffff;
+    color: #464646;
+    background-color: #ffffff;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+
+    color: inherit;
 }
 
-/*
+.button {
+    font-family: "Gilroy - Extra Bold", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #000000;
+    border: none;
+    background-color: #ffffff;
+    background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 30%, #f0c52e 30%, #f0c52e 70%, #ffffff 70%, #ffffff 100%);
+}
+
+.button:hover,
+.button:focus {
+    /*outline: none;*/
+    background-color: #f0c52e;
+    background-image: none;
+}
+
+.button:active {
+    color: rgba(0, 0, 0, 0.3);
+    /*outline: none;*/
+    background-color: #f0c52e;
+    background-image: none;
+}
+
 .visually-hidden {
+    /*все, что будет скрыто классом .visually-hidden, пока розовенькое*/
+    color: pink;
+    /*
 	position: absolute;
 	clip: rect(0 0 0 0);
 	width: 1px;
 	height: 1px;
-	margin: -1px;
+	margin: -1px;*/
 }
-*/
 
 /*3.стили хедера*/
-
 .main-header {
-	color: #000000;
-
-	background-color: #f8e296;
-	background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 12%, #f8e296 12%, #f8e296 100%);
+    color: #000000;
+    background-color: #f8e296;
+    background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 12%, #f8e296 12%, #f8e296 100%);
 }
 
 .main-header-logo {
-	opacity: 1;
+    opacity: 1;
 }
 
-.main-header-logo:hover {
-	opacity: 0.6;
+.main-header-logo:hover,
+.main-header-logo:focus {
+    opacity: 0.6;
+    /*outline: none;*/
 }
 
 .main-header-logo:active {
-	opacity: 0.5;
+    opacity: 0.5;
 }
 
 .search {
-	background-color: transparent;
-	border: none;
+    border: none;
+    background-color: transparent;
 }
 
 .search ~ label {
-	color: #464646;
-
-	opacity: 0.3;
+    opacity: 0.3;
+    color: #464646;
 }
 
 .search:hover ~ label {
-	opacity: 0.6;
+    opacity: 0.6;
 }
 
 .search:focus ~ label {
-	opacity: 0;
+    opacity: 1;
 }
 
 .search:focus {
-	border-bottom: 2px solid #000000;
-	outline: none;
+    border-bottom: 2px solid #000000;
+    /*outline: none;*/
 }
 
 /*как лучше скрыть кнопку, когда она в состоянии покоя?*/
 .search-button {
-color: #000000;
-font-family: "Open Sans";
-font-size: 15px;
-font-weight: 300;
-line-height: 30px;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
 
-background-color: transparent;
-border: 2px solid #000000;
+    color: #000000;
+    border: 2px solid #000000;
+    background-color: transparent;
 }
 
 .search-button:hover,
 .search-button:focus {
-	color: #ffffff;
-	background-color: #000000;
-	outline: none;
+    color: #ffffff;
+    background-color: #000000;
+    /*outline: none;*/
 }
 
 .search-button:active {
-	color: rgba(255, 255, 255, 0.3);
-	outline: none
+    color: rgba(255, 255, 255, 0.3);
+    /*outline: none;*/
 }
 
 .user-navigation {
-	list-style: none;
+    list-style: none;
 }
 
 .navigation-link:focus,
 .navigation-link:hover {
-	opacity: 0.6;
+    opacity: 0.6;
+    /*outline: none;*/
 }
 
 .navigation-link:active {
-	opacity: 0.3;
+    opacity: 0.3;
+    /*outline: none;*/
 }
 
 .shop-options {
-	list-style: none;
+    list-style: none;
 }
 
 .shop-options a {
-	font-family: "Gilroy - Extra Bold";
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 24px;
-	text-transform: uppercase;
+    font-family: "Gilroy - Extra Bold", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+
+    text-transform: uppercase;
 }
 
 .shop-options a:hover,
 .shop-options a:focus {
-	opacity: 0.6;
+    opacity: 0.6;
+    /*outline: none;*/
 }
 
 .shop-options a:active {
-	opacity: 0.3;
+    opacity: 0.3;
+    /*outline: none;*/
 }
 
+/*меню навигации*/
 .catalog-navigation {
-	background-color: transparent;
-	border: none;
+    font-family: "Gilroy - Extra Bold", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
 
-	font-family: "Gilroy - Extra Bold";
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 24px;
-	text-transform: uppercase;
+    text-transform: uppercase;
+
+    border: none;
+    background-color: #f8e296;
 }
 
 .catalog-navigation:hover,
 .catalog-navigation:focus {
-	opacity: 0.6;
-	outline: none;
+    opacity: 0.6;
+    /*outline: none;*/
 }
 
 .catalog-navigation:active {
-	opacity: 0.3;
-	outline: none;
+    opacity: 0.3;
+    /*outline: none;*/
 }
 
 .main-navigation-list {
-	list-style: none;
-	line-height: 36px;
+    line-height: 36px;
+
+    list-style: none;
+
+    background-color: #f7e184;
 }
 
+.navigation-item a {
+    color: #000000;
+    background-color: #f7e184;
+}
 
+.navigation-item a:hover,
+.navigation-item a:focus {
+    opacity: 0.6;
+    /*outline: none;*/
+}
+
+.navigation-item a:active {
+    opacity: 0.3;
+    /*outline: none;*/
+}
+
+/*4.стили основного содержимого*/
+/*4.1. слайдер спец предложений*/
+.special-offer-slider {
+    color: #464646;
+    background-color: #ffffff;
+}
+
+.special-offer-slide h3 {
+    font-family: "Gilroy - Extra Bold", Arial, sans-serif;
+    font-size: 47px;
+    font-weight: 400;
+    line-height: 48px;
+
+    text-align: left;
+
+    color: #000000;
+}
+
+.special-offer-description {
+    text-align: left;
+}
+
+.special-offer-options {
+    text-align: left;
+}
+
+.special-offer-options th {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.special-offer-options td {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 48px;
+
+    color: #000000;
+    background-color: #ffffff;
+}
+
+/*4.2. блок категорий товаров (разделов)*/
+.product-categories {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.product-categories-list {
+    list-style: none;
+}
+
+.product-category {
+    font-family: "Gilroy - Extra Bold", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+
+    text-align: left;
+
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.product-category:active {
+    opacity: 0.3;
+}
+
+/*4.3.блок услуг (слайдер)*/
+.services-slider {
+    color: #464646;
+    background-color: #e5e5e5;
+    background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #e5e5e5 25%, #e5e5e5 100%);
+}
+
+.services-slider-tumbler .button:active {
+    color: #f7e184;
+    background-color: #000000;
+}
+
+.services-slide-radio:first-child:checked ~ label[for="services-slide-radio1"],
+.services-slide-radio:nth-child(2):checked ~ label[for="services-slide-radio2"],
+.services-slide-radio:nth-child(3):checked ~ label[for="services-slide-radio3"] {
+    color: #f7e184;
+    background-color: #000000;
+    background-image: none;
+}
+
+.service-slide h3 {
+    font-family: "Gilroy - Extra Bold", Arial, sans-serif;
+    font-size: 47px;
+    font-weight: 400;
+    line-height: 48px;
+
+    text-align: left;
+
+    color: #000000;
+    background-color: #e5e5e5;
+}
+
+.service-slide p {
+    text-align: left;
+}
+
+/*4.4.блок производителей*/
+.manufacturers-list {
+    list-style: none;
+
+    text-align: center;
+
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.manufacturers-list a {
+    opacity: 0.2;
+}
+
+.manufacturers-list a:hover,
+.manufacturers-list a:focus,
+.manufacturers-list a:active {
+    opacity: 1;
+}
+
+/*4.5.блоки информации "о нас" и контактов, объединены в div.columns*/
+.columns {
+    color: #464646;
+    background-color: #ffffff;
+}
+
+.columns h2 {
+    font-family: "Gilroy - Extra Bold", Arial, sans-serif;
+    font-size: 47px;
+    font-weight: 400;
+    line-height: 48px;
+
+    text-align: left;
+
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.columns p {
+    text-align: left;
+}
+
+.delivery-companies {
+    list-style: none;
+}
+
+.delivery-companies li {
+    font-family: "Gilroy - Extra Bold", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+
+    color: #000000;
+    background-color: #ffffff;
+}
+
+/*5.стили футера*/
+.main-footer {
+    color: #ffffff;
+    background-color: #464646;
+}
+
+.main-footer a {
+    color: #ffffff;
+    background-color: #464646;
+}
+
+.footer-logo:hover,
+.footer-logo:focus,
+.developer-button:hover,
+.developer-button:focus {
+    opacity: 0.6;
+}
+
+.footer-logo:active,
+.developer-button:active {
+    opacity: 0.3;
+}
+
+.main-footer .shop-options {
+    text-align: center;
+}
+
+.footer-social-links {
+    list-style: none;
+
+    text-align: center;
+}
+
+.social-button {
+    opacity: 0.3;
+}
+
+.social-button:hover,
+.social-button:focus {
+    opacity: 0.6;
+}
+
+.social-button {
+    opacity: 0.1;
+}
+
+/*6.модальные окна*/
+.modal {
+    width: 960px;
+    height: 555px;
+
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
+}
+
+.modal-close {
+    width: 55px;
+    height: 55px;
+
+    opacity: 0.5;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    background-color: #f0c52e;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    opacity: 1;
+}
+
+.modal-close:active {
+    opacity: 0.3;
+}
+
+.feedback-label {
+    font-family: "Gilroy - Extra Bold", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+
+    text-align: left;
+
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.feedback-field {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+
+    resize: none;
+
+    opacity: 0.5;
+    color: #464646;
+    border: none;
+    background-color: #e5e5e5;
+}
+
+.feedback-field:hover,
+.feedback-field:focus {
+    opacity: 0.8;
+}
+
+.feedback-field:focus {
+    opacity: 1;
+    border: 3px solid #f8e296;
+    background-color: #ffffff;
+}
+
+.modal-map {
+    width: 960px;
+    height: 560px;
+}
