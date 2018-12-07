@@ -37,6 +37,12 @@
 }
 
 /*2. общие стили и основные стили для body*/
+
+/*outline для удобства при построении сетки*/
+/** {
+    outline: 2px solid rgba(100, 0, 0 ,0.2);
+}*/
+
 body {
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 15px;
@@ -44,6 +50,8 @@ body {
     font-style: normal;
     line-height: 30px;
 
+    min-width: 1440px;		/*откуда эти значения?*/
+    min-height: 2795px;
     margin: 0;
     padding: 0;
 
@@ -55,6 +63,32 @@ a {
     text-decoration: none;
 
     color: inherit;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+
+    white-space: nowrap;
+
+    border: 0;
+
+    clip-path: inset(100%);
 }
 
 .button {
@@ -94,25 +128,50 @@ a {
     background-image: none;
 }
 
-.visually-hidden {
-    /*все, что будет скрыто классом .visually-hidden, пока розовенькое*/
-    color: pink;
-    /*
-	position: absolute;
-	clip: rect(0 0 0 0);
-	width: 1px;
-	height: 1px;
-	margin: -1px;*/
+.container {
+    width: 1160px;
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 /*3.стили хедера*/
 .main-header {
     color: #000000;
-    background-color: #f8e296;
-    background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 12%, #f8e296 12%, #f8e296 100%);
+    background-color: #ffffff;
 }
 
+.main-header-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    padding: 21px 60px 0;
+    padding-bottom: 160px;
+
+    background-color: #f8e296;
+    background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 11.8%, #f8e296 11.8%, #f8e296 100%);
+}
+
+.header-row {
+    display: flex;
+}
+
+.row1 {
+    margin-bottom: 27px;
+}
+
+.row2 {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
 .main-header-logo {
+    width: 164px;
+    height: 36px;
+    margin-bottom: 16px;
+    margin-left: -1px;
+
     opacity: 1;
 }
 
@@ -126,12 +185,46 @@ a {
     opacity: 0.5;
 }
 
+.main-header-search {
+    position: relative;
+
+    display: flex;
+
+    width: 441px;
+    margin-right: 98px;
+}
+
 .search {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+
+    box-sizing: border-box;
+    width: 355px;
+    min-height: 49px;
+    margin: 0;
+    padding: 0 0 0 38px;
+    padding-left: 38px;
+
+    color: #000000;
     border: none;
     background-color: transparent;
 }
 
 .search ~ label {
+    /* Style for "Поиск по с" */
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+
+    position: absolute;
+    top: 10px;
+    left: 38px;
+
+    letter-spacing: 0.15px;
+
     opacity: 0.3;
     color: #464646;
 }
@@ -141,7 +234,7 @@ a {
 }
 
 .search:focus ~ label {
-    opacity: 1;
+    opacity: 0;
 }
 
 .search:focus {
@@ -156,13 +249,29 @@ a {
     font-weight: 300;
     line-height: 30px;
 
+    display: none;
+
+    min-height: 49px;
+    margin: 0;
+    padding-top: 0;
+    padding-right: 19px;
+    padding-left: 18px;
+
+    letter-spacing: 0.15px;
+
     color: #000000;
     border: 2px solid #000000;
     background-color: transparent;
 }
 
+.search:focus ~ .search-button {
+    display: block;
+}
+
 .search-button:hover,
 .search-button:focus {
+    display: block;
+
     color: #ffffff;
     background-color: #000000;
     /*outline: none;*/
@@ -174,7 +283,55 @@ a {
 }
 
 .user-navigation {
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+
     list-style: none;
+}
+
+.user-navigation .navigation-link {
+    margin-right: 20px;
+    padding-left: 20px;
+}
+
+.logout-link {
+    opacity: 0.3;
+}
+
+.user-options {
+    display: flex;
+
+    width: 240px;
+    margin-left: auto;
+    padding-top: 10px;
+
+    justify-content: flex-end;
+}
+
+.navigation-link {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+
+    letter-spacing: 0.15px;
+
+    color: #000000;
+}
+
+.user-options .navigation-link {
+    width: 100px;
+    margin-left: 20px;
+
+    text-align: right;
+}
+
+.navigation-compare-link {
+    box-sizing: border-box;
+    padding-right: 4px;
 }
 
 .navigation-link:focus,
@@ -188,8 +345,21 @@ a {
     /*outline: none;*/
 }
 
+
 .shop-options {
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+
     list-style: none;
+}
+
+.header-shop-options {
+    margin-right: -4px;
+
+    justify-content: flex-end;
+    order: 2;
 }
 
 .shop-options a {
@@ -198,7 +368,21 @@ a {
     font-weight: 400;
     line-height: 24px;
 
+    text-align: right;
+    letter-spacing: 3.6px;
     text-transform: uppercase;
+}
+
+.shop-options li {
+    text-align: right;
+}
+
+.header-shop-options li:first-child {
+    margin-right: 34px;
+}
+
+.header-shop-options li:nth-child(2) {
+    margin-right: 109px;
 }
 
 .shop-options a:hover,
@@ -212,76 +396,180 @@ a {
     /*outline: none;*/
 }
 
+
 /*меню навигации*/
-.catalog-navigation {
+
+.main-navigation {
+    position: relative;
+
+    order: 1;
+}
+
+.main-navigation-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.main-navigation-button {
     font-family: "Gilroy - Extra Bold", Arial, sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
 
+    margin-left: -1px;
+
+    letter-spacing: 3.6px;
     text-transform: uppercase;
 
-    border: none;
-    background-color: #f8e296;
+    color: #000000;
 }
 
-.catalog-navigation:hover,
-.catalog-navigation:focus {
+.main-navigation-button:hover,
+.main-navigation-button:focus {
     opacity: 0.6;
-    /*outline: none;*/
 }
 
-.catalog-navigation:active {
+.main-navigation-button:active {
     opacity: 0.3;
-    /*outline: none;*/
 }
 
-.main-navigation-list {
-    line-height: 36px;
+/*выдвигающееся по ховеру меню*/
+.main-navigation-submenu {
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+
+    display: none;
+
+    width: 1040px;
+    margin: 0;
+    padding: 0;
+    padding-top: 18px;
+    padding-bottom: 35px;
 
     list-style: none;
 
-    background-color: #f7e184;
+    background-color: #f8e296;
+
+    justify-content: flex-start;
 }
 
-.navigation-item a {
+.submenu-category {
+    width: 181px;
+    margin: 0;
+    margin-right: 19px;
+    padding: 0;
+
+    list-style: none;
+}
+
+.submenu-category1 {
+    width: 220px;
+}
+
+.main-navigation-submenu a {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 36px;
+
+    letter-spacing: 0.15px;
+
     color: #000000;
-    background-color: #f7e184;
 }
 
-.navigation-item a:hover,
-.navigation-item a:focus {
+.main-navigation-submenu a:hover,
+.main-navigation-submenu a:focus {
     opacity: 0.6;
-    /*outline: none;*/
 }
 
-.navigation-item a:active {
+.main-navigation-submenu a:active {
     opacity: 0.3;
-    /*outline: none;*/
 }
+
+.main-navigation-item:hover .main-navigation-submenu {
+    display: flex;
+}
+
+
+.main-navigation-button:focus ~ .main-navigation-submenu {
+    display: flex;
+}
+
 
 /*4.стили основного содержимого*/
 /*4.1. слайдер спец предложений*/
 .special-offer-slider {
+    padding-bottom: 105px;
+
     color: #464646;
     background-color: #ffffff;
+}
+
+
+
+.special-offer-slide {
+    position: relative;
+
+    display: flex;
+
+    width: 1160px;
+    padding-top: 99px;
+}
+
+.slide-column {
+    width: 561px;
+    margin-left: auto;
 }
 
 .special-offer-slide h3 {
     font-family: "Gilroy - Extra Bold", Arial, sans-serif;
     font-size: 47px;
     font-weight: 400;
-    line-height: 48px;
+    line-height: 56px;
+
+    position: absolute;
+    top: -32px;
+    left: 599px;
+
+    margin: 0;
+    padding: 0;
 
     text-align: left;
+    letter-spacing: 0.17px;
 
     color: #000000;
 }
 
-.special-offer-description {
-    text-align: left;
+.special-offer-photo {
+    position: absolute;
+    z-index: 0;
+    top: -110px;
+    left: 90px;
+
+    margin: 0;
 }
 
+.special-offer-description {
+    margin: 0;
+    margin-bottom: 140px;
+    padding: 0;
+    padding-right: 70px;
+
+    text-align: left;
+    letter-spacing: 0.15px;
+}
+
+.special-offer-link {
+    position: absolute;
+    top: 218px;
+
+    width: 220px;
+
+    text-align: center;
+}
 .special-offer-options {
     text-align: left;
 }
@@ -302,14 +590,29 @@ a {
     background-color: #ffffff;
 }
 
+/*временно*/
+.slide1,
+.slide2 {
+    display: none;
+}
+
 /*4.2. блок категорий товаров (разделов)*/
 .product-categories {
+    margin-bottom: 83px;
+
     color: #000000;
     background-color: #ffffff;
 }
 
 .product-categories-list {
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+
     list-style: none;
+
+    justify-content: space-between;
 }
 
 .product-category {
@@ -318,10 +621,38 @@ a {
     font-weight: 400;
     line-height: 24px;
 
+    position: relative;
+
+    display: block;
+
+    box-sizing: border-box;
+    width: 160px;
+    padding-top: 190px;
+
     text-align: left;
+    letter-spacing: 0.18px;
 
     color: #000000;
     background-color: #ffffff;
+}
+
+.category-monopods {
+    padding-right: 40px;
+}
+
+.product-category::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 160px;
+    height: 160px;
+
+    content: "";
+
+    background-color: #f8e296;
 }
 
 .product-category:active {
@@ -330,12 +661,62 @@ a {
 
 /*4.3.блок услуг (слайдер)*/
 .services-slider {
+    display: flex;
+
+    margin-bottom: 45px;
+    padding-bottom: 69px;
+
     color: #464646;
     background-color: #e5e5e5;
-    background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 25%, #e5e5e5 25%, #e5e5e5 100%);
+    background-image: linear-gradient(to bottom, #ffffff 0%, #ffffff 25.84%, #e5e5e5 25.84%, #e5e5e5 100%);
+
+    justify-content: center;
+}
+
+.service-slider-wrapper {
+    display: flex;
+
+    width: 1160px;
+
+    justify-content: flex-start;
+}
+
+
+.services-slider-tumbler {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 277px;
+    padding-top: 80px;
+    padding-bottom: 46px;
+
+    border-right: 7px solid #000000;
+}
+
+.services-slider-tumbler .button {
+    font-family: "Gilroy - Extra Bold", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+
+    box-sizing: border-box;
+    width: 160px;
+    margin-bottom: 24px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    text-align: center;
+    text-align: center;
+    letter-spacing: 2.15px;
+    text-transform: uppercase;
+
+    color: #000000;
+    background-image: linear-gradient(to bottom, #e5e5e5 0%, #e5e5e5 40%, #f0c52e 40%, #f0c52e 60%, #e5e5e5 60%, #e5e5e5 100%);
 }
 
 .services-slider-tumbler .button:active {
+    width: 100%;
+
     color: #f7e184;
     background-color: #000000;
 }
@@ -343,9 +724,17 @@ a {
 .services-slide-radio:first-child:checked ~ label[for="services-slide-radio1"],
 .services-slide-radio:nth-child(2):checked ~ label[for="services-slide-radio2"],
 .services-slide-radio:nth-child(3):checked ~ label[for="services-slide-radio3"] {
+    width: 100%;
+    padding-right: 118px;
+
     color: #f7e184;
     background-color: #000000;
     background-image: none;
+}
+
+.service-slide {
+    padding-top: 73px;
+    padding-left: 117px;
 }
 
 .service-slide h3 {
@@ -354,28 +743,61 @@ a {
     font-weight: 400;
     line-height: 48px;
 
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+
     text-align: left;
+    letter-spacing: 0.21px;
 
     color: #000000;
-    background-color: #e5e5e5;
 }
 
 .service-slide p {
+    width: 430px;
+    margin: 0;
+    padding: 0;
+
     text-align: left;
+    letter-spacing: 0.15px;
+}
+
+/*временно*/
+.service-slide2,
+.service-slide3 {
+    display: none;
 }
 
 /*4.4.блок производителей*/
-.manufacturers-list {
-    list-style: none;
+.manufacturers {
+    margin-bottom: 93px;
+}
 
-    text-align: center;
+.manufacturers-list {
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
 
     color: #000000;
     background-color: #ffffff;
+
+    justify-content: space-between;
 }
 
+.manufacturers-list img {
+    display: block;
+}
+
+
 .manufacturers-list a {
+    display: block;
+
     opacity: 0.2;
+
+    filter: grayscale(1);
 }
 
 .manufacturers-list a:hover,
@@ -386,8 +808,14 @@ a {
 
 /*4.5.блоки информации "о нас" и контактов, объединены в div.columns*/
 .columns {
+    margin-bottom: 93px;
+
     color: #464646;
     background-color: #ffffff;
+}
+
+.columns-wrapper {
+    display: flex;
 }
 
 .columns h2 {
@@ -422,13 +850,51 @@ a {
 
 /*5.стили футера*/
 .main-footer {
+    margin-top: 95px;
+    padding-top: 65px;
+    padding-bottom: 67px;
+
     color: #ffffff;
     background-color: #464646;
+}
+
+.main-footer .container {
+    position: relative;
+}
+
+.footer-row {
+    display: flex;
+}
+
+.footer-row1 {
+    margin-bottom: 30px;
+
+    justify-content: flex-end;
+}
+
+.footer-row2 {
+    margin-bottom: 65px;
+
+    justify-content: space-between;
+}
+
+.footer-row3 {
+    justify-content: center;
+}
+
+.main-footer .user-navigation,
+.main-footer .user-options {
+    margin: 0;
+    padding: 0;
 }
 
 .main-footer a {
     color: #ffffff;
     background-color: #464646;
+}
+
+.footer-logo {
+    position: absolute;
 }
 
 .footer-logo:hover,
@@ -443,18 +909,82 @@ a {
     opacity: 0.3;
 }
 
-.main-footer .shop-options {
+.main-footer .address {
+    margin: 0;
+    padding: 0;
+
+    order: 1;
+}
+
+.footer-shop-options {
+    font-family: "Gilroy - Extra Bold", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+
+    display: flex;
+
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+
+    list-style: none;
+
     text-align: center;
+    text-align: right;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+
+    order: 2;
+    justify-content: center;
+}
+
+.footer-shop-options a {
+    display: block;
+}
+
+.main-footer .phone {
+    margin: 0;
+    padding: 0;
+
+    order: 3;
+}
+
+.footer-shop-options li {
+    margin: 0;
+    margin-right: 35px;
+}
+
+.footer-shop-options li:last-child {
+    margin-right: 0;
 }
 
 .footer-social-links {
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+
     list-style: none;
 
     text-align: center;
 }
 
 .social-button {
+    display: block;
+
+    width: 32px;
+    height: 32px;
+    margin-right: 22px;
+
     opacity: 0.3;
+    border-radius: 50%;
+    background-image: url("../img/fb.svg");
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
 }
 
 .social-button:hover,
@@ -466,10 +996,29 @@ a {
     opacity: 0.1;
 }
 
+.developer-button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    display: block;
+}
+
+.developer-button img {
+    display: block;
+}
+
 /*6.модальные окна*/
 .modal {
+    position: relative;
+
     width: 960px;
     height: 555px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 93px;
+    padding-right: 100px;
+    padding-left: 100px;
 
     color: #000000;
     background-color: #ffffff;
@@ -477,6 +1026,10 @@ a {
 }
 
 .modal-close {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+
     width: 55px;
     height: 55px;
 
@@ -496,11 +1049,24 @@ a {
     opacity: 0.3;
 }
 
+.feedback {
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.column-group {
+    width: 360px;
+}
+
 .feedback-label {
     font-family: "Gilroy - Extra Bold", Arial, sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
+
+    display: block;
 
     text-align: left;
 
@@ -512,6 +1078,9 @@ a {
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
+
+    min-width: 360px;
+    margin-bottom: 35px;
 
     resize: none;
 
@@ -532,25 +1101,62 @@ a {
     background-color: #ffffff;
 }
 
+.feedback-textarea {
+    min-width: 760px;
+    min-height: 156px;
+}
+
+.modal .button {
+    display: block;
+}
+
 .modal-map {
+    position: relative;
+
     width: 960px;
     height: 560px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 /*7.стилизация уникального содержимого внутренней страницы*/
 /*7.1. заголовок и хлебные крошки*/
+
+.inner-page .main-header {
+    margin-bottom: 40px;
+}
+
+
 .inner-page h1 {
     font-family: "Gilroy - Extra Bold", Arial, sans-serif;
     font-size: 47px;
     font-weight: 400;
     line-height: 48px;
 
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+
     color: #000000;
     background-color: #ffffff;
 }
 
+.breadscrumbs-container {
+    padding-left: 61px;
+}
+
 .breadscrumbs {
+    display: flex;
+
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+
     list-style: none;
+}
+
+.breadscrumbs li {
+    margin-right: 40px;
 }
 
 .breadscrumbs a,
@@ -559,6 +1165,8 @@ a {
     font-size: 14px;
     font-weight: 300;
     line-height: 24px;
+
+    display: block;
 
     opacity: 0.3;
     color: #000000;
@@ -577,8 +1185,18 @@ a {
 
 /*7.2.фильтры и сортировка*/
 
+.main-wrapper {
+    display: flex;
+
+    width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .filters,
 .sorting {
+    display: flex;
+
     color: #000000;
     background-color: rgba(220,220,220, 0.4);
 }
@@ -590,21 +1208,41 @@ a {
     font-weight: 400;
     line-height: 24px;
 
+    margin: 0;
+    padding: 0;
+
     text-transform: uppercase;
 }
 
+/*фильтры*/
+
+.filters {
+    flex-direction: column;
+
+    width: 468px;
+}
+
+.filters h2 {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 69px;
+    padding: 25px 0;
+    padding-left: 200px;
+
+    background-color: #dcdcdc;
+}
+
+.filters-form {
+    padding-left: 200px;
+}
+
 .filters-form fieldset {
+    width: 201px;
+
     text-align: left;
 
     border: none;
-}
-
-.price-filter label,
-.filters-form legend {
-    font-family: "Gilroy - Extra Bold", Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 24px;
 }
 
 .filters-form label {
@@ -613,8 +1251,43 @@ a {
     line-height: 40px;
 }
 
+.price-filter label,
+.filters-form legend {
+    font-family: "Gilroy - Extra Bold", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+
+    letter-spacing: 0.18px;
+}
+
 .filters-form input:disabled {
     color: #a6a6a6;
+}
+
+.color-list {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.bluetooth-filter label {
+    padding-right: 200px;
+}
+
+/*сортировка*/
+
+.catalog-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    width: 972px;
+}
+
+.sorting {
+    margin-bottom: 69px;
+    padding: 25px 0;
 }
 
 .sorting-item {
@@ -651,12 +1324,27 @@ a {
 /*7.3.каталог товаров*/
 
 .catalog-list {
+    display: flex;
+
+    margin: 0;
+    margin-left: 32px;
+    padding: 0;
+
     list-style: none;
+
+    flex-wrap: wrap;
 }
 
-.catalog-item-link:hover p,
-.catalog-item-link:focus p {
-    opacity: 0.7;
+.catalog-item {
+    position: relative;
+
+    margin-right: 20px;
+    margin-bottom: 69px;
+    margin-left: 40px;
+}
+
+.catalog-item-link {
+    display: block;
 }
 
 .catalog-item-link:hover ~ button,
@@ -664,11 +1352,38 @@ a {
     /*появление кнопок - visibility или display или что-то еще?*/
 }
 
+.catalog-item-image {
+    margin: 0;
+    padding: 0;
+}
+
+.catalog-item img {
+    display: block;
+}
+
+.button-basket {
+    position: absolute;
+    top: 180px;
+    left: 80px;
+
+    display: none;
+
+    width: 200px;
+}
+
 .compare-button {
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 13px;
     font-weight: 300;
     line-height: 36px;
+
+    position: absolute;
+    top: 225px;
+    left: 108px;
+
+    display: none;
+
+    letter-spacing: 0.13px;
 
     opacity: 0.5;
     color: #000000;
@@ -696,7 +1411,20 @@ a {
     font-weight: 400;
     line-height: 24px;
 
+    width: 260px;
+
     color: #000000;
+}
+
+.catalog-item:hover img {
+    opacity: 0.7;
+}
+
+.catalog-item:hover .compare-button,
+.catalog-item:hover .button-basket,
+.catalog-item:focus .compare-button,
+.catalog-item:focus .button-basket {
+    display: block;
 }
 
 /*7.4.пагинация*/
@@ -707,14 +1435,28 @@ a {
     font-weight: 400;
     line-height: 24px;
 
+    display: flex;
+
+    margin: 0;
+    padding: 25px 28px;
+
     list-style: none;
 
     text-align: center;
     vertical-align: center;
+    letter-spacing: 0.91px;
     text-transform: uppercase;
 
     color: #000000;
     background-color: #ebebeb;
+}
+
+.pagination-item-back {
+    margin-right: auto;
+}
+
+.pagination-item-next {
+    margin-left: auto;
 }
 
 .pagination-way:hover,
@@ -727,6 +1469,8 @@ a {
 }
 
 .pagination-number {
+    margin-right: 28px;
+
     opacity: 0.3;
 }
 
@@ -736,5 +1480,9 @@ a {
 }
 
 .pagination-number:active {
+    opacity: 1;
+}
+
+.pagination-item-current {
     opacity: 1;
 }
