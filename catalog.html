@@ -36,32 +36,36 @@
           <button class="search-button" type="submit">Найти</button>
         </form>
 
-        <ul class="user-navigation header-user-navigation">
-      <li>
-        <a class="navigation-link login-link" href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#272525" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
-          Валентин Петухов
-        </a>
-      </li>
-      <li>
-        <a class="navigation-link logout-link" href="#">
-          Выйти
-        </a>
-      </li>
-      <li class="compare-link-item">
-        <a class="navigation-link navigation-compare-link" href="compare.html">
-          Сравнить
-          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>
-        </a>
-      </li>
-      <li>
-        <a class="navigation-link navigation-basket-link" href="basket.html">
-          Корзина
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/></svg>
-        </a>
-      </li>
-    </ul>
-    </div>
+        <ul class="user-navigation header-user-navigation logged-user-navigation">
+          <li>
+            <a class="navigation-link login-link" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
+                <path fill="#272525" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z" /></svg>
+              Валентин Петухов
+            </a>
+          </li>
+          <li>
+            <a class="navigation-link logout-link" href="#">
+              Выйти
+            </a>
+          </li>
+          <li class="compare-link-item">
+            <a class="navigation-link navigation-compare-link" href="compare.html">
+              Сравнить
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                <path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z" /></svg>
+            </a>
+          </li>
+          <li>
+            <a class="navigation-link navigation-basket-link" href="basket.html">
+              Корзина
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                <path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z" />
+                <path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z" /></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
 
       <div class="header-row row2">
         <ul class="shop-options header-shop-options">
@@ -140,17 +144,17 @@
         <form class="filters-form" action="#" method="post">
           <fieldset class="price-filter">
             <label class="filter-form-label">Стоимость</label>
-              <!-- <input type="range" name="price" min="0" max="9000" step="50" value="5000" class="visually-hidden" id="range"> -->
-              <div class="range-controls">
-                <div class="scale">
-                  <div class="bar"></div>
-                </div>
-                <div class="toggle toggle-min"></div>
-                <div class="toggle toggle-max"></div>
-                <label class="min-price price-label">от 0</label>
-                <label class="max-price price-label">до 5000</label>
+            <!-- <input type="range" name="price" min="0" max="9000" step="50" value="5000" class="visually-hidden" id="range"> -->
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
               </div>
-              
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
+              <label class="min-price price-label">от 0</label>
+              <label class="max-price price-label">до 5000</label>
+            </div>
+
           </fieldset>
 
           <fieldset class="color-filter">
@@ -161,7 +165,7 @@
                 <label for="black-color-checkbox">Черный</label>
               </li>
               <li>
-                <input class="visually-hidden" type="checkbox" name="white" id="white-color-checkbox" >
+                <input class="visually-hidden" type="checkbox" name="white" id="white-color-checkbox">
                 <label for="white-color-checkbox">Белый</label>
               </li>
               <li>
@@ -173,7 +177,7 @@
                 <label for="red-color-checkbox">Красный</label>
               </li>
               <li>
-                <input class="visually-hidden" type="checkbox" name="pink" id="pink-color-checkbox" >
+                <input class="visually-hidden" type="checkbox" name="pink" id="pink-color-checkbox">
                 <label for="pink-color-checkbox">Розовый</label>
               </li>
             </ul>
@@ -200,14 +204,14 @@
 
           <!--сортировка товаров - как лучше реализовать?-->
           <ul class="sorting-list">
-            <li><a class="sorting-item" href="#">По цене</a></li>
+            <li><a class="sorting-item active-sorting-item" href="#">По цене</a></li>
             <li><a class="sorting-item" href="#">По типу</a></li>
             <li><a class="sorting-item" href="#">По популярности</a></li>
           </ul>
-          
+
           <div class="sorting-direction">
             <a class="sorting-item-increase sorting-type" href="#"><span class="visually-hidden">По возрастанию</span></a>
-            <a class="sorting-item-decrease sorting-type" href="#"><span class="visually-hidden">По убыванию</span></a>
+            <a class="sorting-item-decrease sorting-type active-sorting-item" href="#"><span class="visually-hidden">По убыванию</span></a>
           </div>
         </section>
 
@@ -222,10 +226,10 @@
                   <img src="img/item-1.jpg" width="360" height="380" alt="Фотография любительской селфи-палки">
                 </p>
                 <h3>Любительская селфи-палка</h3>
+                <span class="catalog-item-price">500 руб.</span>
               </a>
               <button class="button button-basket" type="button">В корзину</button> <!-- ссылка или кнопка? -->
               <button class="compare-button" type="button">Добавить к сравнению</button>
-              <span class="catalog-item-price">500 руб.</span>
             </li>
 
             <li class="catalog-item">
@@ -233,11 +237,11 @@
                 <p class="catalog-item-image">
                   <img src="img/item-2.jpg" width="360" height="380" alt="Фотография профессиональной селфи-палки">
                 </p>
-                <h3>Профессиональная селфи-палка</h3>
+                <h3>Профессиональная<br> селфи-палка</h3>
+                <span class="catalog-item-price">1 500 руб.</span>
               </a>
               <button class="button button-basket" type="button">В корзину</button>
               <button class="compare-button" type="button">Добавить к сравнению</button>
-              <span class="catalog-item-price">1 500 руб.</span>
             </li>
 
             <li class="catalog-item">
@@ -246,30 +250,34 @@
                   <img src="img/item-3.jpg" width="360" height="380" alt="Фотография непотопляемой селфи-палки">
                 </p>
                 <h3>Непотопляемая селфи-палка</h3>
+                <span class="catalog-item-price">2 500 руб.</span>
               </a>
               <button class="button button-basket" type="button">В корзину</button>
               <button class="compare-button" type="button">Добавить к сравнению</button>
-              <span class="catalog-item-price">2 500 руб.</span>
             </li>
 
-            <li class="catalog-item">
+            <li class="catalog-item new-catalog-item">
               <a class="catalog-item-link" href="catalog-item4.html">
                 <p class="catalog-item-image">
                   <img src="img/item-4.jpg" width="360" height="380" alt="Фотография селфи-палки «Следуй за мной»">
                 </p>
                 <h3>Селфи-палка «Следуй за мной»</h3>
+                <span class="catalog-item-price">4 900 руб.</span>
               </a>
               <button class="button button-basket" type="button">В корзину</button>
               <button class="compare-button" type="button">Добавить к сравнению</button>
-              <span class="catalog-item-price">4 900 руб.</span>
             </li>
           </ul>
           <!-- пагинация -->
           <ul class="pagination-list">
             <li class="pagination-item pagination-item-back pagination-way"><a href="#">Назад</a></li>
-            <li class="pagination-item pagination-number pagination-item-current">1</li>
-            <li class="pagination-item pagination-number"><a href="#">2</a></li>
-            <li class="pagination-item pagination-number"><a href="#">3</a></li>
+            <li>
+              <ul class="page-numbers-list">
+                <li class="pagination-item pagination-number pagination-item-current">1</li>
+                <li class="pagination-item pagination-number"><a href="#">2</a></li>
+                <li class="pagination-item pagination-number"><a href="#">3</a></li>
+              </ul>
+            </li>
             <li class="pagination-item pagination-item-next pagination-way"><a href="#">Вперед</a></li>
           </ul>
         </section>
@@ -280,7 +288,7 @@
   </main>
 
   <!--4.футер страницы  -->
-  <!--4.футер страницы-->
+
   <footer class="main-footer">
     <div class="container">
       <a class="footer-logo" href="index.html" aria-label="Магазин Девайс - главная">
@@ -288,22 +296,41 @@
       </a>
 
       <div class="footer-row footer-row1">
-        <ul class="user-navigation">
+        <ul class="user-navigation footer-user-navigation logged-user-navigation">
           <li>
-            <a class="navigation-link profile-link" href="profile.html">Валентин Петухов</a>
+            <a class="navigation-link login-link" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12">
+                <path fill="#272525" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z" /></svg>
+              Валентин Петухов
+            </a>
           </li>
           <li>
-            <a class="navigation-link logout-link" href="#">Выйти</a>
+            <a class="navigation-link logout-link" href="#">
+              Выйти
+            </a>
+          </li>
+          <li class="compare-link-item">
+            <a class="navigation-link navigation-compare-link" href="compare.html">
+              Сравнить
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                <path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z" /></svg>
+            </a>
+          </li>
+          <li>
+            <a class="navigation-link navigation-basket-link" href="basket.html">
+              Корзина
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                <path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z" />
+                <path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z" /></svg>
+            </a>
           </li>
         </ul>
-
-        <div class="user-options">
-          <a class="navigation-link navigation-compare-link" href="#">Сравнить</a>
-          <a class="navigation-link navigation-basket-link" href="#">Корзина</a>
-        </div>
       </div>
 
       <div class="footer-row footer-row2">
+
+        <p class="address">г. Москва, ул. Строителей, 15</p>
+
         <ul class="shop-options footer-shop-options">
           <li>
             <a href="deliver.html">Доставка</a>
@@ -315,7 +342,7 @@
             <a href="contacts.html">Контакты</a>
           </li>
         </ul>
-        <p class="address">г. Москва, ул. Строителей, 15</p>
+
         <p class="phone"><a href="#">Тел.: +7 (495) 495-95-95</a></p>
       </div>
 
@@ -362,13 +389,13 @@
         <label for="message-field" class="feedback-label">Текст письма:</label>
         <textarea class="feedback-field feedback-textarea" name="message" id="message-field" placeholder="В свободной форме"></textarea>
 
-        <button class="button" type="submit">Отправить</button>
+        <button class="modal-submit-button button" type="submit">Отправить</button>
       </div>
     </form>
   </section>
 
   <!-- 5.2.окно с картой -->
-  <section class="modal-map modal-hidden">
+  <section class="modal modal-map modal-hidden">
     <h2 class="visually-hidden">Как до нас добраться</h2>
     <img src="img/map-big.jpg" width="960" height="560" alt="Наш адрес - Москва, ул. Строителей, 15">
     <button class="modal-close" type="button" title="Закрыть окно"><span class="visually-hidden">Закрыть</span></button>
