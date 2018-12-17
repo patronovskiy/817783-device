@@ -25,7 +25,7 @@
 
   <header class="main-header container">
     <div class="main-header-wrapper">
-      <a class="main-header-logo">
+      <a href="index.html" class="main-header-logo">
         <img src="img/logo.png" width="164" height="36" alt="логотип магазина Девайс">
       </a>
 
@@ -36,20 +36,32 @@
           <button class="search-button" type="submit">Найти</button>
         </form>
 
-        <ul class="user-navigation">
-          <li>
-            <a class="navigation-link profile-link" href="profile.html">Валентин Петухов</a>
-          </li>
-          <li>
-            <a class="navigation-link logout-link" href="#">Выйти</a>
-          </li>
-        </ul>
-
-        <div class="user-options">
-          <a class="navigation-link navigation-compare-link" href="compare.html">Сравнить</a>
-          <a class="navigation-link navigation-basket-link" href="basket.html">Корзина</a>
-        </div>
-      </div>
+        <ul class="user-navigation header-user-navigation">
+      <li>
+        <a class="navigation-link login-link" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"><path fill="#272525" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
+          Валентин Петухов
+        </a>
+      </li>
+      <li>
+        <a class="navigation-link logout-link" href="#">
+          Выйти
+        </a>
+      </li>
+      <li class="compare-link-item">
+        <a class="navigation-link navigation-compare-link" href="compare.html">
+          Сравнить
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>
+        </a>
+      </li>
+      <li>
+        <a class="navigation-link navigation-basket-link" href="basket.html">
+          Корзина
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/></svg>
+        </a>
+      </li>
+    </ul>
+    </div>
 
       <div class="header-row row2">
         <ul class="shop-options header-shop-options">
@@ -127,57 +139,53 @@
 
         <form class="filters-form" action="#" method="post">
           <fieldset class="price-filter">
-            <label>Стоимость
-              <input type="range" name="price" min="0" max="9000" step="50" value="5000">
-            </label>
+            <label class="filter-form-label">Стоимость</label>
+              <!-- <input type="range" name="price" min="0" max="9000" step="50" value="5000" class="visually-hidden" id="range"> -->
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+                <label class="min-price price-label">от 0</label>
+                <label class="max-price price-label">до 5000</label>
+              </div>
+              
           </fieldset>
 
           <fieldset class="color-filter">
-            <legend>Цвет</legend>
+            <label class="filter-form-label">Цвет</label>
             <ul class="color-list">
               <li>
-                <label>
-                  Черный
-                  <input type="checkbox" name="black" checked>
-                </label>
+                <input class="visually-hidden" type="checkbox" name="black" id="black-color-checkbox" checked>
+                <label for="black-color-checkbox">Черный</label>
               </li>
               <li>
-                <label>
-                  Белый
-                  <input type="checkbox" name="white">
-                </label>
+                <input class="visually-hidden" type="checkbox" name="white" id="white-color-checkbox" >
+                <label for="white-color-checkbox">Белый</label>
               </li>
               <li>
-                <label>
-                  Синий
-                  <input type="checkbox" name="blue" checked>
-                </label>
+                <input class="visually-hidden" type="checkbox" name="blue" id="blue-color-checkbox" checked>
+                <label for="blue-color-checkbox">Синий</label>
               </li>
               <li>
-                <label>
-                  Красный
-                  <input type="checkbox" name="red" checked>
-                </label>
+                <input class="visually-hidden" type="checkbox" name="red" id="red-color-checkbox" checked>
+                <label for="red-color-checkbox">Красный</label>
               </li>
               <li>
-                <label>
-                  Розовый
-                  <input type="checkbox" name="pink">
-                </label>
+                <input class="visually-hidden" type="checkbox" name="pink" id="pink-color-checkbox" >
+                <label for="pink-color-checkbox">Розовый</label>
               </li>
             </ul>
           </fieldset>
 
           <fieldset class="bluetooth-filter">
-            <legend>Bluetooth</legend>
-            <label>
-              Есть
-              <input type="radio" name="bluetooth" value="true">
-            </label>
-            <label>
-              Нет
-              <input type="radio" name="bluetooth" value="false">
-            </label>
+            <label class="filter-form-label">Bluetooth</label>
+            <input class="visually-hidden" id="bluetooth-true-field" type="radio" name="bluetooth" value="true" checked>
+            <label class="bluetooth-field-label" for="bluetooth-true-field">Есть</label>
+
+            <input class="visually-hidden" id="bluetooth-false-field" type="radio" name="bluetooth" value="false">
+            <label class="bluetooth-field-label" for="bluetooth-false-field">Нет</label>
           </fieldset>
 
           <button class="button" type="submit">Показать</button>
@@ -191,11 +199,16 @@
           <h2>Сортировка:</h2>
 
           <!--сортировка товаров - как лучше реализовать?-->
-          <a class="sorting-item" href="#">По цене</a>
-          <a class="sorting-item" href="#">По типу</a>
-          <a class="sorting-item" href="#">По популярности</a>
-          <a class="sorting-item-increase sorting-type" href="#"><span class="visually-hidden">По возрастанию</span></a>
-          <a class="sorting-item-decrease sorting-type" href="#"><span class="visually-hidden">По убыванию</span></a>
+          <ul class="sorting-list">
+            <li><a class="sorting-item" href="#">По цене</a></li>
+            <li><a class="sorting-item" href="#">По типу</a></li>
+            <li><a class="sorting-item" href="#">По популярности</a></li>
+          </ul>
+          
+          <div class="sorting-direction">
+            <a class="sorting-item-increase sorting-type" href="#"><span class="visually-hidden">По возрастанию</span></a>
+            <a class="sorting-item-decrease sorting-type" href="#"><span class="visually-hidden">По убыванию</span></a>
+          </div>
         </section>
 
         <!--3.4.каталог товаров  -->
@@ -329,7 +342,7 @@
 
   <!-- 5.модальные окна -->
   <!-- 5.1. окно обратной связи -->
-  <section class="modal modal-feedback">
+  <section class="modal modal-feedback modal-hidden">
     <h2 class="visually-hidden">Напишите нам!</h2>
     <button class="modal-close" type="button" title="Закрыть окно"><span class="visually-hidden">Закрыть</span></button>
     <form class="feedback" action="#" method="post">
@@ -355,7 +368,7 @@
   </section>
 
   <!-- 5.2.окно с картой -->
-  <section class="modal-map">
+  <section class="modal-map modal-hidden">
     <h2 class="visually-hidden">Как до нас добраться</h2>
     <img src="img/map-big.jpg" width="960" height="560" alt="Наш адрес - Москва, ул. Строителей, 15">
     <button class="modal-close" type="button" title="Закрыть окно"><span class="visually-hidden">Закрыть</span></button>
