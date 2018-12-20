@@ -887,6 +887,8 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
 
 .product-categories-list {
     display: flex;
+    flex-wrap: wrap;
+    max-width: 1160px;
 
     margin: 0;
     padding: 0;
@@ -1302,6 +1304,10 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
     letter-spacing: 0.1px;
 }
 
+.contacts iframe {
+    border: none;
+}
+
 .delivery-companies {
     margin: 0;
     margin-top: 66px;
@@ -1362,6 +1368,10 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
 
 .map-link .img {
     display: block;
+}
+
+.modal-map iframe {
+    border: none;
 }
 
 /*5.стили футера*/
@@ -2054,6 +2064,28 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
     letter-spacing: 0.18px;
 }
 
+/*отрисовка состояний*/
+.filters-form input:focus + label  {
+    outline: 2px solid #4d90fe;
+}
+
+.filters-form input:focus + label::before {
+    opacity: 0.6;
+}
+
+.filters-form label:hover::before,
+.filters-form label:focus::before {
+    opacity: 0.6;
+}
+
+.filters-form label:active::before {
+    opacity: 1;
+}
+
+.filters-form input:disabled + label::before {
+    opacity: 0.25;
+}
+
 /*фильтр стоимости*/
 
 .range-controls {
@@ -2136,10 +2168,6 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
     left: 85px;
 }
 
-.filters-form input:disabled {
-    color: #a6a6a6;
-}
-
 /*фильтр цвета*/
 
 .color-list {
@@ -2195,6 +2223,7 @@ label[for="pink-color-checkbox"]::before {
     background-image: url(../img/checkbox-on.svg);
     background-size: 27px 23px;
 }
+
 
 /*фильтр по наличию bluetooth*/
 
@@ -2259,8 +2288,23 @@ label[for="pink-color-checkbox"]::before {
     top: 15px;
 }
 
-input:checked + .bluetooth-field-label::after {
+input:checked + .bluetooth-field-label::after,
+input:active + .bluetooth-field-label::after  {
     display: block;
+}
+
+input:focus + .bluetooth-field-label::after,
+.bluetooth-field-label:hover::after,
+.bluetooth-field-label:focus::after {
+    opacity: 0.6;
+}
+
+.bluetooth-field-label:active::after {
+    opacity: 1;
+}
+
+input:disabled + .bluetooth-field-label::after {
+    opacity: 0.25;
 }
 
 /*кнопка отправки формы*/
@@ -2572,4 +2616,5 @@ input:checked + .bluetooth-field-label::after {
 .inner-page .main-footer {
     margin: 0;
 }
+
 
