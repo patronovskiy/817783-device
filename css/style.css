@@ -2382,7 +2382,7 @@ input:disabled + .bluetooth-field-label::after {
     border-radius: 50%;
 }
 
-.catalog-item-link {
+.catalog-item-card {
     display: flex;
 
     width: 360px;
@@ -2420,7 +2420,7 @@ input:disabled + .bluetooth-field-label::after {
     width: 173px;
 }
 
-.catalog-item span {
+.catalog-item-price {
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 16px;
     font-weight: 300;
@@ -2500,6 +2500,7 @@ input:disabled + .bluetooth-field-label::after {
 
 .catalog-item:hover img {
     opacity: 0.7;
+    cursor: pointer;
 }
 
 .catalog-item:hover .compare-button,
