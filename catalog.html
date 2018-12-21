@@ -166,12 +166,12 @@
             <div class="filter-wrapper">
               <h2 class="visually-hidden">Фильтр:</h2>
 
-              <form class="filters-form" action="#" method="post">
+              <form class="filters-form" action="https://echo.htmlacademy.ru" method="post">
                 <fieldset class="price-filter">
                   <label class="filter-form-label">Стоимость</label>
-                  <!-- <input type="range" name="price" min="0" max="9000" step="50" value="5000" class="visually-hidden" id="range"> -->
+                  <input type="range" name="price" min="0" max="9000" step="50" value="5000" class="visually-hidden" id="range" readonly tabindex="-1">
                   <div class="range-controls">
-                    <div class="scale">
+                    <div class="scale" tabindex="0">
                       <div class="bar"></div>
                     </div>
                     <div class="toggle toggle-min"></div>

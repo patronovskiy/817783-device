@@ -2095,7 +2095,7 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
     margin-left: 5px;
 }
 
-.scale {
+.range-controls .scale {
     position: absolute;
     top: 10px;
 
