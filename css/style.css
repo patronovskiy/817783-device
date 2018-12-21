@@ -692,6 +692,7 @@ input[type="radio"].visually-hidden {
 
     counter-increment: slides;
 
+    background-color: #ffffff;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#f7e296), color-stop(22%, #f7e296), color-stop(22%, #ffffff), to(#ffffff));
     background-image: -webkit-linear-gradient(top, #f7e296 0%, #f7e296 22%, #ffffff 22%, #ffffff 100%);
     background-image:      -o-linear-gradient(top, #f7e296 0%, #f7e296 22%, #ffffff 22%, #ffffff 100%);
@@ -1958,6 +1959,7 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
 
     content: "";
 
+    background-color: #ffffff;
     background-image: url(../img/nav-arrow.svg);
     background-repeat: no-repeat;
     background-size: 4px 7px;
@@ -2022,6 +2024,7 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
 }
 
 .main-wrapper-row1 {
+    background-color: #dbdbdb;
     background-image: -webkit-gradient(linear, left top, right top, from(#dbdbdb), color-stop(50%, #dbdbdb), color-stop(50%, #ebebeb), to(#ebebeb));
     background-image: -webkit-linear-gradient(left, #dbdbdb 0%, #dbdbdb 50%, #ebebeb 50%, #ebebeb 100%);
     background-image:      -o-linear-gradient(left, #dbdbdb 0%, #dbdbdb 50%, #ebebeb 50%, #ebebeb 100%);
@@ -2029,6 +2032,7 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
 }
 
 .main-wrapper-row2 {
+    background-color: #eeeeee;
     background-image: -webkit-gradient(linear, left top, right top, from(#eeeeee), color-stop(50%, #eeeeee), color-stop(50%, #ffffff), to(#ffffff));
     background-image: -webkit-linear-gradient(left, #eeeeee 0%, #eeeeee 50%, #ffffff 50%, #ffffff 100%);
     background-image:      -o-linear-gradient(left, #eeeeee 0%, #eeeeee 50%, #ffffff 50%, #ffffff 100%);
