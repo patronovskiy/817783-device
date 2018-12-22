@@ -169,7 +169,6 @@
               <form class="filters-form" action="https://echo.htmlacademy.ru" method="post">
                 <fieldset class="price-filter">
                   <label class="filter-form-label">Стоимость</label>
-                  <input type="range" name="price" min="0" max="9000" step="50" value="5000" class="visually-hidden" id="range" readonly tabindex="-1">
                   <div class="range-controls">
                     <div class="scale" tabindex="0">
                       <div class="bar"></div>
@@ -228,49 +227,57 @@
 
             <ul class="catalog-list">
               <li class="catalog-item">
-                <span class="catalog-item-card">
+                <div class="catalog-item-card">
                   <p class="catalog-item-image">
                     <img src="img/item-1.jpg" width="360" height="380" alt="Фотография любительской селфи-палки">
                   </p>
-                  <a href="catalog-item1.html"><h3>Любительская селфи-палка</h3></a>
+                  <a href="catalog-item1.html">
+                    <h3>Любительская селфи-палка</h3>
+                  </a>
                   <span class="catalog-item-price">500 руб.</span>
-                </span>
+                </div>
                 <a class="button button-basket" href="#">В корзину</a>
                 <a class="compare-button" href="#">Добавить к сравнению</a>
               </li>
 
               <li class="catalog-item">
-                <span class="catalog-item-card">
+                <div class="catalog-item-card">
                   <p class="catalog-item-image">
                     <img src="img/item-2.jpg" width="360" height="380" alt="Фотография профессиональной селфи-палки">
                   </p>
-                  <a href="catalog-item2.html"><h3 class="short-heading">Профессиональная селфи-палка</h3></a>
+                  <a href="catalog-item2.html">
+                    <h3 class="short-heading">Профессиональная селфи-палка</h3>
+                  </a>
                   <span class="catalog-item-price">1 500 руб.</span>
-                </span>
+                </div>
                 <a class="button button-basket" href="#">В корзину</a>
                 <a class="compare-button" href="#">Добавить к сравнению</a>
               </li>
 
               <li class="catalog-item">
-                <span class="catalog-item-card">
+                <div class="catalog-item-card">
                   <p class="catalog-item-image">
                     <img src="img/item-3.jpg" width="360" height="380" alt="Фотография непотопляемой селфи-палки">
                   </p>
-                  <a href="catalog-item3.html"><h3>Непотопляемая селфи-палка</h3></a>
+                  <a href="catalog-item3.html">
+                    <h3>Непотопляемая селфи-палка</h3>
+                  </a>
                   <span class="catalog-item-price">2 500 руб.</span>
-                </span>
+                </div>
                 <a class="button button-basket" href="#">В корзину</a>
                 <a class="compare-button" href="#">Добавить к сравнению</a>
               </li>
 
               <li class="catalog-item new-catalog-item">
-                <span class="catalog-item-card">
+                <div class="catalog-item-card">
                   <p class="catalog-item-image">
                     <img src="img/item-4.jpg" width="360" height="380" alt="Фотография селфи-палки «Следуй за мной»">
                   </p>
-                  <a href="catalog-item4.html"><h3>Селфи-палка «Следуй за мной»</h3></a>
+                  <a href="catalog-item4.html">
+                    <h3>Селфи-палка «Следуй за мной»</h3>
+                  </a>
                   <span class="catalog-item-price">4 900 руб.</span>
-                </span>
+                </div>
                 <a class="button button-basket" href="#">В корзину</a>
                 <a class="compare-button" href="#">Добавить к сравнению</a>
               </li>
@@ -375,40 +382,6 @@
 
     </div>
   </footer>
-
-  <!-- 5.модальные окна -->
-  <!-- 5.1. окно обратной связи -->
-  <section class="modal modal-feedback modal-hidden">
-    <h2 class="visually-hidden">Напишите нам!</h2>
-    <button class="modal-close" type="button" title="Закрыть окно"><span class="visually-hidden">Закрыть</span></button>
-    <form class="feedback" action="#" method="post">
-      <div class="modal-form-group column-group">
-        <label for="name-field" class="feedback-label">
-          Ваше имя:
-        </label>
-        <input type="text" class="feedback-field" name="name" id="name-field" placeholder="Имя Фамилия">
-      </div>
-
-      <div class="modal-form-group column-group">
-        <label for="email-field" class="feedback-label">Ваш e-mail:</label>
-        <input type="email" class="feedback-field" name="email" id="email-field" placeholder="email@example.com">
-      </div>
-
-      <div class="modal-form-group">
-        <label for="message-field" class="feedback-label">Текст письма:</label>
-        <textarea class="feedback-field feedback-textarea" name="message" id="message-field" placeholder="В свободной форме"></textarea>
-
-        <button class="modal-submit-button button" type="submit">Отправить</button>
-      </div>
-    </form>
-  </section>
-
-  <!-- 5.2.окно с картой -->
-  <section class="modal modal-map modal-hidden">
-    <h2 class="visually-hidden">Как до нас добраться</h2>
-    <img src="img/map-big.jpg" width="960" height="560" alt="Наш адрес - Москва, ул. Строителей, 15">
-    <button class="modal-close" type="button" title="Закрыть окно"><span class="visually-hidden">Закрыть</span></button>
-  </section>
 
 </body>
 
