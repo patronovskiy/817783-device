@@ -15,10 +15,8 @@
     7.1. заголовок и хлебные крошки
     7.2.фильтры и сортировка
     7.3.каталог товаров
-    7.4.пагинация
+    7.4.пагинация*/
 
-
-*/
 /*1.подключение шрифтов*/
 @font-face {
     font-family: "Gilroy";
@@ -57,13 +55,6 @@
 }
 
 /*2. общие стили и основные стили для body*/
-
-/*outline для удобства при построении сетки*/
-/** {
-    outline: 2px solid rgba(100, 0, 0 ,.2);
-}*/
-
-
 body {
     font-family: "Open Sans", Arial, sans-serif;
     font-size: 15px;
@@ -135,7 +126,6 @@ input[type="radio"].visually-hidden {
     background-image:      -o-linear-gradient(top, #ffffff 0%, #ffffff 41%, #f0c52e 41%, #f0c52e 59%, #ffffff 59%, #ffffff 100%);
     background-image:         linear-gradient(to bottom, #ffffff 0%, #ffffff 41%, #f0c52e 41%, #f0c52e 59%, #ffffff 59%, #ffffff 100%);
 }
-
 
 /*эта кнопка во внутренней странице в фильтрах*/
 .filters-form .button {
@@ -216,7 +206,6 @@ input[type="radio"].visually-hidden {
     justify-content: space-between;
 }
 
-
 .main-header-logo {
     width: 164px;
     height: 36px;
@@ -226,12 +215,12 @@ input[type="radio"].visually-hidden {
     opacity: 1;
 }
 
-.main-header-logo:hover,
-.main-header-logo:focus {
+.active-logo:hover,
+.active-logo:focus {
     opacity: 0.6;
 }
 
-.main-header-logo:active {
+.active-logo:active {
     opacity: 0.5;
 }
 
@@ -469,7 +458,6 @@ input[type="radio"].visually-hidden {
     margin-left: auto;
 }
 
-
 .shop-options a:hover,
 .shop-options a:focus {
     opacity: 0.6;
@@ -479,9 +467,7 @@ input[type="radio"].visually-hidden {
     opacity: 0.3;
 }
 
-
 /*меню навигации*/
-
 .main-navigation {
     position: relative;
 
@@ -637,15 +623,12 @@ input[type="radio"].visually-hidden {
     display: flex;
 }
 
-
 /*4.стили основного содержимого*/
-
 .main-content {
     min-width: 1200px;
 }
 
 /*4.1. слайдер спец предложений*/
-
 .special-offer-slider {
     position: relative;
 
@@ -701,10 +684,9 @@ input[type="radio"].visually-hidden {
     counter-increment: slides;
 
     background-color: #ffffff;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#f7e296), color-stop(22%, #f7e296), color-stop(22%, #ffffff), to(#ffffff));
-    background-image: -webkit-linear-gradient(top, #f7e296 0%, #f7e296 22%, #ffffff 22%, #ffffff 100%);
-    background-image:      -o-linear-gradient(top, #f7e296 0%, #f7e296 22%, #ffffff 22%, #ffffff 100%);
-    background-image:         linear-gradient(to bottom, #f7e296 0%, #f7e296 22%, #ffffff 22%, #ffffff 100%);
+    background-image: -webkit-linear-gradient(top, #f7e296, #f7e296 113px, #ffffff 113px, #ffffff);
+    background-image:      -o-linear-gradient(top, #f7e296, #f7e296 113px, #ffffff 113px, #ffffff);
+    background-image:         linear-gradient(to bottom, #f7e296, #f7e296 113px, #ffffff 113px, #ffffff);
 }
 
 .special-offer-slide::after {
@@ -778,7 +760,6 @@ input[type="radio"].visually-hidden {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     min-width: 220px;
-    margin-bottom: 47px;
     margin-left: 1px;
     padding-right: 30px;
     padding-left: 42px;
@@ -786,7 +767,6 @@ input[type="radio"].visually-hidden {
     vertical-align: top;
     letter-spacing: 3.7px;
 }
-
 
 .special-offer-options {
     margin-bottom: 31px;
@@ -841,7 +821,6 @@ input[type="radio"].visually-hidden {
 }
 
 /*подгонка отдельных слайдов*/
-
 .slide1 .special-offer-link {
     padding-left: 43px;
 }
@@ -869,17 +848,28 @@ input[type="radio"].visually-hidden {
     padding-right: 42px;
 }
 
-
-/*переключатель слайдов - стилизация*/
-.special-offer-tumbler {
-    position: absolute;
-    z-index: 100;
-    top: 329px;
-    right: 103px;
-
+.slider-row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+
+    margin-bottom: 47px;
+}
+
+/*переключатель слайдов - стилизация*/
+.special-offer-tumbler {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    max-width: 100px;
+    margin-left: 158px;
+    padding-top: 14px;
+
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .special-offer-label {
@@ -924,16 +914,15 @@ input[id="offer-slide-radio3"]:focus ~ .special-offer-tumbler label[for="offer-s
     outline-offset: -2px;
 }
 
-
-input[id="offer-slide-radio1"]:checked ~ .special-offer-tumbler label[for="offer-slide-radio1"] {
+input[id="offer-slide-radio1"]:checked ~ .slider-view-window label[for="offer-slide-radio1"] {
     background-image: url("../img/slider-button.svg");
 }
 
-input[id="offer-slide-radio2"]:checked ~ .special-offer-tumbler label[for="offer-slide-radio2"] {
+input[id="offer-slide-radio2"]:checked ~ .slider-view-window label[for="offer-slide-radio2"] {
     background-image: url("../img/slider-button.svg");
 }
 
-input[id="offer-slide-radio3"]:checked ~ .special-offer-tumbler label[for="offer-slide-radio3"] {
+input[id="offer-slide-radio3"]:checked ~ .slider-view-window label[for="offer-slide-radio3"] {
     background-image: url("../img/slider-button.svg");
 }
 
@@ -1115,7 +1104,6 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
     justify-content: flex-start;
 }
 
-
 .services-slider-tumbler {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1205,7 +1193,6 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
     padding-left: 116px;
 }
 
-
 .service-slide::after {
     position: absolute;
 
@@ -1225,7 +1212,6 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
     background-position: 0 0;
     background-size: 136px 164px;
 }
-
 
 .service-slide2::after {
     top: 61px;
@@ -1577,14 +1563,11 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
     top: 12px;
 }
 
-.footer-logo:hover,
-.footer-logo:focus,
 .developer-button:hover,
 .developer-button:focus {
     opacity: 0.6;
 }
 
-.footer-logo:active,
 .developer-button:active {
     opacity: 0.3;
 }
@@ -1722,7 +1705,6 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
 }
 
 /*6.модальные окна*/
-
 /*анимация открытия модальных окон*/
 @keyframes modal-opening-animation {
     0% {
@@ -1965,7 +1947,6 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
     margin-left: -435px;
 }
 
-
 /*7.стилизация уникального содержимого внутренней страницы*/
 /*7.1. заголовок и хлебные крошки*/
 .inner-page {
@@ -2077,21 +2058,7 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
 }
 
 /*7.2.фильтры и сортировка*/
-
-.main-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-        flex-direction: column;
-
-    min-width: 1200px;
-
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-}
-
-/*.main-wrapper-row {
+.main-wrapper-row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2101,7 +2068,7 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     min-width: 1200px;
-}*/
+}
 
 .main-wrapper-row1 {
     background-color: #dbdbdb;
@@ -2213,7 +2180,6 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
 
     margin-left: auto;
     padding-top: 6px;
-    /*    margin-left: 203px;*/
 }
 
 .sorting-type {
@@ -2268,7 +2234,6 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
 }
 
 /*фильтры*/
-
 /*размещен в другом диве (main-wrapper-row1) для центровки */
 .filter-heading {
     font-family: "Gilroy", Arial, sans-serif;
@@ -2362,7 +2327,6 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
 }
 
 /*фильтр стоимости*/
-
 .range-controls {
     position: relative;
 
@@ -2447,7 +2411,6 @@ input[id="offer-slide-radio3"]:checked ~ .slider-view-window .slider-container {
 }
 
 /*фильтр цвета*/
-
 .color-list {
     margin: 0;
     margin-top: 15px;
@@ -2502,9 +2465,7 @@ label[for="pink-color-checkbox"]::before {
     background-size: 27px 23px;
 }
 
-
 /*фильтр по наличию bluetooth*/
-
 .bluetooth-filter .filter-form-label {
     display: block;
 
@@ -2592,7 +2553,6 @@ input:disabled + .bluetooth-field-label::after {
 }
 
 /*кнопка отправки формы*/
-
 .filters .button {
     display: block;
 
@@ -2604,7 +2564,6 @@ input:disabled + .bluetooth-field-label::after {
     text-align: center;
     letter-spacing: 3.7px;
 }
-
 
 /*7.3.каталог товаров*/
 .catalog {
@@ -2805,7 +2764,6 @@ input:disabled + .bluetooth-field-label::after {
 }
 
 /*7.4.пагинация*/
-
 .pagination-list {
     font-family: "Gilroy", Arial, sans-serif;
     font-size: 15px;

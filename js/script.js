@@ -1,25 +1,21 @@
 // скрипт для работы со всплывающими окнами
-
 // объявление переменных
 // всплывающее окно с формой "напишите нам"
 var writeUsButton = document.querySelector('.feedback-field-button');
 var writeUsPopup = document.querySelector('.modal-feedback');
 var writeUsCloseButton = document.querySelector('.modal-feedback-close');
 var writeUsForm = document.querySelector('.feedback');
-
 // поля форм
 var userNameField = writeUsPopup.querySelector('.user-name-field');
 var emailField = writeUsPopup.querySelector('.email-field');
 var messageField = writeUsPopup.querySelector('.feedback-textarea');
 var userNameStorage;
 var isStorageSupport = true;
-
 // всплывающее окно с картой
 var staticMap = document.querySelector('.static-map');
 var mapLink = document.querySelector('.modal-map-link');
 var mapPopup = document.querySelector('.modal-map');
 var mapCloseButton = document.querySelector('.modal-map-close');
-
 
 // проверка работы localStorage
 try {
@@ -47,7 +43,6 @@ writeUsCloseButton.addEventListener('click', function (evt) {
 	writeUsPopup.classList.add('modal-hidden');
 	writeUsForm.classList.remove('modal-error');
 });
-
 
 // проверка формы
 writeUsForm.addEventListener('submit', function (evt) {
@@ -81,7 +76,6 @@ writeUsForm.addEventListener('submit', function (evt) {
 	}
 });
 
-
 // удаление стилей для невалидной формы при фокусе
 userNameField.addEventListener('focus', function (evt) {
 	userNameField.classList.remove('invalid-form');
@@ -95,8 +89,6 @@ messageField.addEventListener('focus', function (evt) {
 	messageField.classList.remove('invalid-form');
 });
 
-
-
 // появление окна с картой
 mapLink.addEventListener('click', function (evt) {
 	evt.preventDefault();
@@ -109,7 +101,6 @@ mapCloseButton.addEventListener('click', function (evt) {
 })
 
 // закрытие окон по клавише escape
-
 window.addEventListener('keydown', function (evt) {
 	if (evt.keyCode === 27) {
 		if (!writeUsPopup.classList.contains('modal-hidden')) {
