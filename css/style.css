@@ -475,7 +475,7 @@ input[type="radio"].visually-hidden {
     display: -ms-flexbox;
     display: flex;
 
-    width: 300px;
+    width: 239px;
 
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -526,7 +526,7 @@ input[type="radio"].visually-hidden {
 .main-navigation-item::before {
     position: absolute;
     top: 14px;
-    left: 237px;
+    right: 0px;
 
     display: block;
 
